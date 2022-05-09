@@ -1,4 +1,4 @@
-<h1>R-Studiom &#x26BE;</h1>
+<h1 align="center">R-Studiom &#x26BE;</h1>
 
 
 # &#x2666; Introduction :
