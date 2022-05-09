@@ -1,4 +1,4 @@
-<h1>R-Studiom</h1>
+<h1 style="color: red;">R-Studiom</h1>
 
 <h2>Introduction :</h2>
 
