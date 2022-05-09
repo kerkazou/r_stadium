@@ -21,11 +21,11 @@ La connexion est basée sur l’email d'utilisateur et le mot de passe, par un f
 Après s'être connecté, l'utilisateur est redirigé vers la page Profil.
 
 -	Pages d'inscription :
-.	Le contenu de formulaire d'inscription, comme la suivante :
-.	Nom d'utilisateur : être uniquement alphanumérique.
-.	Email : doit être vérifié.
-.	Mot de passe : doit comporter au moins six caractères et doit être vérifié par un deuxième mot de passe lors de l'inscription.
-.	Vérification du mot de passe :
+. Le contenu de formulaire d'inscription, comme la suivante :
+. Nom d'utilisateur : être uniquement alphanumérique.
+. Email : doit être vérifié.
+. Mot de passe : doit comporter au moins six caractères et doit être vérifié par un deuxième mot de passe lors de l'inscription.
+. Vérification du mot de passe :
     Toute erreur de formulaire doit être affichée sous l'entrée d'où proviennent les données.
     Après s'être connecté, l'utilisateur est redirigé vers la page Profil.
 
