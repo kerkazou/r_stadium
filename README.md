@@ -1,16 +1,18 @@
-R-Studiom
-Introduction :
-R-sports, un site Web où les responsables et les joueurs peuvent créer un compte, puis se connecter, pour les responsables ils peuvent ajouter leur espace sportif, mais pour les utilisateurs ils peuvent crées une équipe ou réserver un espace sportif, seul ou avec une équipe de leurs amis ou rejoindre un autre groupe.
-Le site Web utilise des bases de données pour stocker les données de connexion des responsables et des joueurs.
+<h1 style="color: red;">R-Studiom</h1>
 
-Les pages de ce projet sont les suivantes :
+<h2>Introduction :</h2>
+
+<p><span>R-sports</span>, un site Web où les responsables et les joueurs peuvent créer un compte, puis se connecter, pour les responsables ils peuvent ajouter leur espace sportif, mais pour les utilisateurs ils peuvent crées une équipe ou réserver un espace sportif, seul ou avec une équipe de leurs amis ou rejoindre un autre groupe.
+Le site Web utilise des bases de données pour stocker les données de connexion des responsables et des joueurs.</p>
+
+<h2>Les pages de ce projet sont les suivantes :</h2>
 •	Page d'accueil.
 •	Pages de connexion et d'inscription.
 •	Page de profil.
 •	Page Liste des espace sportive et formulaire état/ d'ajout/ modification/ supprimer d’espace sportive.
 •	Page de réservation (les types de sports).
 
-Mise en page:
+<h2>Mise en page:</h2>
 •	La page d'accueil :
 Il y a une barre de navigation horizontale en haut de la page avec le logo du site Web à gauche et les boutons de connexion et d’enregistre un Nouveau compte à la droite. Le contenu est une publicité des espaces sportive, avec un bouton pour voir une vidéo de comment ça marche ce site Web.
 
