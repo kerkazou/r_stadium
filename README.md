@@ -2,23 +2,23 @@
 
 ## Introduction :
 
-R-sports, un site Web où les responsables et les joueurs peuvent créer un compte, puis se connecter, pour les responsables ils peuvent ajouter leur espace sportif, mais pour les utilisateurs ils peuvent crées une équipe ou réserver un espace sportif, seul ou avec une équipe de leurs amis ou rejoindre un autre groupe.
-Le site Web utilise des bases de données pour stocker les données de connexion des responsables et des joueurs.</p>
+    R-sports, un site Web où les responsables et les joueurs peuvent créer un compte, puis se connecter, pour les responsables ils peuvent ajouter leur espace sportif, mais pour les utilisateurs ils peuvent crées une équipe ou réserver un espace sportif, seul ou avec une équipe de leurs amis ou rejoindre un autre groupe.
+    Le site Web utilise des bases de données pour stocker les données de connexion des responsables et des joueurs.</p>
 
 ## Les pages de ce projet sont les suivantes :
-Page d'accueil.
-Pages de connexion et d'inscription.
-Page de profil.
-Page Liste des espace sportive et formulaire état/ d'ajout/ modification/ supprimer d’espace sportive.
-Page de réservation (les types de sports).
+    Page d'accueil.
+    Pages de connexion et d'inscription.
+    Page de profil.
+    Page Liste des espace sportive et formulaire état/ d'ajout/ modification/ supprimer d’espace sportive.
+    Page de réservation (les types de sports).
 
 ## Mise en page:
 ### -	La page d'accueil :
-Il y a une barre de navigation horizontale en haut de la page avec le logo du site Web à gauche et les boutons de connexion et d’enregistre un Nouveau compte à la droite. Le contenu est une publicité des espaces sportive, avec un bouton pour voir une vidéo de comment ça marche ce site Web.
+    Il y a une barre de navigation horizontale en haut de la page avec le logo du site Web à gauche et les boutons de connexion et d’enregistre un Nouveau compte à la droite. Le contenu est une publicité des espaces sportive, avec un bouton pour voir une vidéo de comment ça marche ce site Web.
 
 ### -	Pages de connexion :
-La connexion est basée sur l’email d'utilisateur et le mot de passe, par un formulaire de connexion, et deux phrases, oublié le mot de passe, la dernière phrase est un lien d'appel à l'action "S'inscrire".
-Après s'être connecté, l'utilisateur est redirigé vers la page Profil.
+    La connexion est basée sur l’email d'utilisateur et le mot de passe, par un formulaire de connexion, et deux phrases, oublié le mot de passe, la dernière phrase est un lien d'appel à l'action "S'inscrire".
+    Après s'être connecté, l'utilisateur est redirigé vers la page Profil.
 
 ### -	Pages d'inscription :
     . Le contenu de formulaire d'inscription, comme la suivante :
@@ -30,16 +30,16 @@ Après s'être connecté, l'utilisateur est redirigé vers la page Profil.
         Après s'être connecté, l'utilisateur est redirigé vers la page Profil.
 
 ### -	Page de profil : 
-Cette page contiendra une salutation pour la première fois l'utilisateur soit le responsable ou le joueur, après doit être rempli le reste les données du profil, avant que 24h, pour la confirmation.
-L'utilisateur peut modifier ses données personnelles à tout moment.
+    Cette page contiendra une salutation pour la première fois l'utilisateur soit le responsable ou le joueur, après doit être rempli le reste les données du profil, avant que 24h, pour la confirmation.
+    L'utilisateur peut modifier ses données personnelles à tout moment.
 
 ### -	Page Liste des espaces sportive :
-Est une page de la responsable. Il y a une barre de navigation verticale à gauche de la page avec un titre à haut, et une liste (état, ajout, modification, supprimer).
+    Est une page de la responsable. Il y a une barre de navigation verticale à gauche de la page avec un titre à haut, et une liste (état, ajout, modification, supprimer).
 
 ### -	Page de réservation : 
-Est un page pour les joueurs, pour réserver une espace de sport, et cela se fait par sélectionner la ville et le type de sport qui te plait.
+    Est un page pour les joueurs, pour réserver une espace de sport, et cela se fait par sélectionner la ville et le type de sport qui te plait.
 
 ## Les technologies utilises:
-+ HTML CSS BOOTSTRAP JavaScript (pour la validation des formulaires) pour le front and.
-+ PHP OOP pour le back end (utilise regex pour la validation des formulaires).
-+ Base de donnée relationnelle pour le type de base de donnée (MySQL).
+    + HTML CSS BOOTSTRAP JavaScript (pour la validation des formulaires) pour le front and.
+    + PHP OOP pour le back end (utilise regex pour la validation des formulaires).
+    + Base de donnée relationnelle pour le type de base de donnée (MySQL).
