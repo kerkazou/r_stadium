@@ -1,9 +1,9 @@
-<h1 align="center">R-Studiom &#x26BE;</h1>
+<h1 align="center">R-Stadium &#x26BE;</h1>
 
 
 # &#x2666; Introduction :
 À notre vie sportive, il y a beaucoup de problèmes pour faire du sport, cela la rend difficile et compliquée, et le plus important est de ne pas trouver où ni avec qui la pratiquer.
-Pour ça R-Studiom est de faciliter la collaboration entre les amateurs du sport, afin d’avoir une organisation facile, fluide...
+Pour ça R-Stadium est de faciliter la collaboration entre les amateurs du sport, afin d’avoir une organisation facile, fluide...
 
 # &#x2666; Contexte :
 R-Studiom, un site Web où les responsables et les joueurs peuvent créer un compte, puis se connecter, pour les responsables ils peuvent ajouter leur espace sportif, mais pour les utilisateurs ils peuvent crées une équipe ou réserver un espace sportif, seul ou avec une équipe de leurs amis ou rejoindre un autre groupe.
@@ -14,7 +14,7 @@ Le site Web utilise des bases de données pour stocker les données de connexion
     • Je peux consulter la page d’accueil.
     • Je peux voir les espaces de sport disponibles, et des publications.
 ## Autant Qu’utilisateur :
-    • Je peux me connecter à R-Studiom.
+    • Je peux me connecter à R-Stadium.
     • Je peux voir et gérer mes informations personnelles.
     • Je peux filtrer les espaces des sports par catégories.
     • Je peux réserver un espace de sport par catégories
@@ -22,7 +22,7 @@ Le site Web utilise des bases de données pour stocker les données de connexion
 ## Autant Qu’administrateur :
     • Je peux me connecter pour accéder au Dashboard admin de Studiom.
     • Je peux voir et gérer mes informations personnelles.
-    • Je peux voir les statistiques de mon Studiom.
+    • Je peux voir les statistiques de mon stade.
     • Je peux me déconnecter.
     
     
