@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- icons bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>R-Stadium</title>
+</head>
+
+<body>
+    <!-- page Top -->
+    <div id="page_top">
+        <!-- NavBar -->
+        <a class="navbar-brand d-flex justify-content-center py-3 text-dark" id="logo1" href="#page-top"><h2>R-STADIUM</h2></a>
+        <nav class="navbar navbar-expand-lg navbar-shrink navbar-dark bg-dark px-5 py-2" id="navbar">
+            <a class="navbar-brand d-none" id="logo2" href="#page-top"><span>R</span>-<span>STADIUM</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav text-uppercase d-flex gap-3 mx-auto py-4 py-lg-0" id="menu">
+                    <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connecter.html">Se Connecter</a></li>
+                </ul>
+            </div>            
+        </nav>
+
+        <!-- Home -->
+        <div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center gap-3 text-light">
+            <h1 class="text-uppercase">Welcome To R-Stadiom</h1>
+            <h3>Easily find a stadium or a sports club in Morocco</h3>
+            <form action="" class="w-100 d-flex justify-content-center align-items-center gap-3">
+                <select>
+                    <option value="">All sports</option>
+                    <option value="">Sport 1</option>
+                    <option value="">Sport 2</option>
+                </select>
+                <select>
+                    <option value="">All the cities</option>
+                    <option value="">citie 1</option>
+                    <option value="">citie 2</option>
+                </select>
+                <button class="btn btn-lg btn-primary" type="button">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reservation -->
+    <div class="row mx-2 mt-5" id="reservation">
+        <h1>reservation</h1>
+    </div>
+
+    <!-- Gallery -->
+    <div class="row mx-2 mt-5" id="gallery">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" class="w-100 shadow-1-strong rounded mb-4"/>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp" class="w-100 shadow-1-strong rounded mb-4"/>
+        </div>
+        
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp" class="w-100 shadow-1-strong rounded mb-4"/>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" class="w-100 shadow-1-strong rounded mb-4"/>
+        </div>
+        
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp" class="w-100 shadow-1-strong rounded mb-4"/>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp" class="w-100 shadow-1-strong rounded mb-4"/>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="row mx-2 mt-5" id="about">
+        <h1>about</h1>
+    </div>
+
+    <!-- Contact -->
+    <div class="mt-5 pt-5" id="contact">
+        <div class="h1 text-center text-uppercase text-light mt-5">Contact Us</div>
+        <form>
+            <div class="row m-5 d-flex justify-content-center align-items-center gap-3">
+                <div class="d-flex flex-column gap-4 col-md-5">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Your Name"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" placeholder="Your Email" required/>
+                    </div>
+                    <div class="form-group mb-md-0">
+                        <input class="form-control" type="tel" placeholder="Your Phone"/>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group form-group-textarea mb-md-0">
+                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"><button class="btn btn-primary btn-xl mt-5 text-uppercase" type="submit">Send Message</button></div>
+        </form>
+    </div>
+
+    <footer class="text-light mt-5 py-5">
+        <div class="d-lg-flex justify-content-around align-items-center gap-3">
+            <div class="col-lg-5 d-flex flex-column px-4">
+                <a class="nav-link h1 text-light" href="#page-top">R-Stadium</a>
+                <p class="ps-3">
+                    <b> R-Stadium</b> system vous propose, un ensemble de logiciels de gestion et de contrôle d'accès, un ensemble homogène couvrant l’intégralité de vos besoins pour gérer, contrôler et accroître votre activité.
+                </p>
+                <p class="ps-3">
+                    <b> R-Stadium</b> System est présent dans du aires de jeux, mais aussi dans les secteurs du fitness, des piscines, des installations sportives municipales, des tennis, …
+                </p>
+            </div>
+            <div class="">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-light" href="#reservation">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#connecter">Se Connecter</a></li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column gap-3 text-center">
+                <div>&copy; Copyright 2022 R-Stadium</div>
+                <div class="d-flex text-light justify-content-center gap-3">
+                    <a class="bi bi-facebook nav-link text-light h1"></a>
+                    <a class="bi bi-twitter nav-link text-light h1"></a>
+                    <a class="bi bi-instagram nav-link text-light h1"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script src="js/scripts.js"></script>

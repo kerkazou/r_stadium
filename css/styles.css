@@ -1,0 +1,65 @@
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-gray: #C0C3C9;
+  --color-dark: #212529;
+  --color-green-light: #15D155;
+  --color-green-dark: #22C55E;
+  --color-blue: #3B82F6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#page_top{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/image1.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+select{
+  padding-left: 10px;
+  border-radius: 8px;
+  width: 20%;
+  height: 50px;
+}
+
+
+/* Contact */
+#contact{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-dark);
+  background-image: url(../assets/map-image.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#contact input{
+  height: 50px;
+}
+#contact textarea{
+  min-height: 200px;
+  max-height: 300px;
+}
+#contact button{
+  width: 15%;
+  height: 60px;
+}
+
+
+/* Footer */
+footer{
+  width: 100%;
+  background-color: var(--color-dark);
+}
+footer a:hover{
+  text-decoration: underline;
+  text-transform: uppercase;
+}
