@@ -32,18 +32,17 @@ select{
 
 
 /* Gallery */
+.slide{
+  width: 100%;
+}
 #img_slide{
   width: 100%;
   overflow: hidden;
 }
 #img_slide img{
-  width: 100%;
-  height: 45vh;
-  background-size: cover;
-}
-#img_slide img:hover{
+  width: 30% !important;
   height: 50vh;
-  transition: 10ms;
+  border-radius: 5%;
 }
 
 

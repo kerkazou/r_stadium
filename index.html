@@ -62,20 +62,32 @@
     <!-- Gallery -->
     <div class="row mx-2 mt-5" id="gallery">
         <div class="h1 text-center text-uppercase my-5">gallery</div>
-        <div class="d-flex align-items-center my-5">
-            <div class="bi bi-caret-left btn btn-xl h1" style="width: 10%;" id="Previous"></div>
-            <div class="d-flex justify-content-center align-items-center gap-5" id="img_slide">
-                <img src="assets/slider1.jpg">
-                <img src="assets/slider2.jpg">
-                <img src="assets/slider3.jpg">
-                <img src="assets/slider4.jpg">
-                <img src="assets/slider5.jpg">
-                <img src="assets/slider6.jpg">
-                <img src="assets/slider7.jpg">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner" id="img_slide">
+                <div class="carousel-item d-flex justify-content-center align-items-center gap-5 active">
+                    <img src="assets/slider1.jpg" class="d-block w-100">
+                    <img src="assets/slider2.jpg" class="d-block w-100">
+                    <img src="assets/slider3.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item d-flex justify-content-center align-items-center gap-5">
+                    <img src="assets/slider4.jpg" class="d-block w-100">
+                    <img src="assets/slider5.jpg" class="d-block w-100">
+                    <img src="assets/slider6.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item d-flex justify-content-center align-items-center gap-5">
+                    <img src="assets/slider7.jpg" class="d-block w-100">
+                    <img src="assets/slider5.jpg" class="d-block w-100">
+                    <img src="assets/slider4.jpg" class="d-block w-100">
+                </div>
             </div>
-            <div class="bi bi-caret-right btn btn-xl h1" style="width: 10%;" id="next"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
         </div>
-    </div>
+        </div>
 
     <!-- About -->
     <div class="row mx-2 mt-5" id="about">
