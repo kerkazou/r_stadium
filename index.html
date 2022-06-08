@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- icons bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- icons font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     <link rel="stylesheet" href="css/styles.css">
     <title>R-Stadium</title>
 </head>
@@ -54,14 +56,18 @@
         </div>
     </div>
 
+    <div class="espace"></div>
+
     <!-- Reservation -->
-    <div class="row mx-2 mt-5" id="reservation">
+    <div class="row mx-2" id="reservation">
         <h1 class="text-center">reservation</h1>
     </div>
 
+    <div class="espace"></div>
+
     <!-- Gallery -->
-    <div class="row mx-2 mt-5" id="gallery">
-        <div class="h1 text-center text-uppercase my-5">gallery</div>
+    <div class="row mx-2 mt-5 py-5" id="gallery">
+        <div class="h1 text-center text-uppercase my-5">Gallery</div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner" id="img_slide">
                 <div class="carousel-item d-flex justify-content-center align-items-center gap-5 active">
@@ -87,15 +93,204 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
         </div>
-        </div>
-
-    <!-- About -->
-    <div class="row mx-2 mt-5" id="about">
-        <div class="h1 text-center text-uppercase mt-5">about</div>
     </div>
 
+    <div class="espace"></div>
+
+    <!-- About -->
+    <div class="mt-5 py-5" id="about">
+        <div class="h1 text-center text-uppercase text-light">About Us</div>
+        <div class="accordion accordion-flush my-5" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    NOTRE OFFRE
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fas fa-street-view"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">The largest sports booking website in Morocco :</h5>
+                            <p class="card-text">
+                                R-Staduim lists several sports centers in Morocco. Find the sports activity of your choice in your region :
+                            </p>
+                            <div>
+                                <p class="btn btn-link text-info">Marrackech</p>
+                                <p class="btn btn-link text-info">Youssoufia</p>
+                                <p class="btn btn-link text-info">Safi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fas fa-volleyball-ball"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">An unrivaled choice of sports activities :</h5>
+                            <p class="card-text">R-Stadium offers as many sports as possible: from football to bascketball, from tennis.</p>
+                            <div>
+                                <p class="btn btn-link text-info">Football</p>
+                                <p class="btn btn-link text-info">Basketball</p>
+                                <p class="btn btn-link text-info">Tennis</p>
+                                <p class="btn btn-link text-info">Fitness</p>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">Simple & instant online booking :</h5>
+                            <p class="card-text">
+                                Check the availability of your activity in real time and book instantly online, 24/7, without ever moving around or picking up the phone.
+                                Our planning tool allows you to align your calendar with that of your colleagues to organize sports after-works with ease and conviviality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    NOS SERVICES
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fas fa-map-marked-alt my-2"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">Sports Directory</h5>
+                            <p class="card-text">
+                                Add your club to our directory for free so that our users can discover your infrastructure and services.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fas fa-calendar-check my-2"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">Online booking</h5>
+                            <p class="card-text">
+                                Receive reservations 24/7. Athletes can book your services at any time and pay online.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fas fa-drafting-compass my-2"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">Management software</h5>
+                            <p class="card-text">
+                                We have developed tools for sports centers to efficiently manage their reservations and resources.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    VOS AVANTAGES
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fa-solid fa-bullhorn my-2"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">Increase your visibility</h5>
+                            <p class="card-text">
+                                Your land and services will be distributed to a large number of users.
+                            </p>
+                        </div>
+                    </div>    
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fas fa-coins my-2"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">Make your infrastructure profitable</h5>
+                            <p class="card-text">
+                                Optimize your occupancy rate with new customers, eliminating gaps in your schedule, reducing cancellations.
+                            </p>
+                        </div>
+                    </div>    
+                    <div class="card col-lg-3 text-center border-0 h-100 shadow-sm">
+                        <div class="icon"><i class="fas fa-hand-holding-usd my-2"></i></div>
+                        <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
+                            <h5 class="card-title">Customer acquisition</h5>
+                            <p class="card-text">
+                                Our mission is to fulfill your infrastructure and reservations through our sales channels and online presence.
+                            </p>
+                        </div>
+                    </div>      
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- <div class="accordion my-5" style="width: 92%; margin-left: 4%;" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        NOTRE OFFRE
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show d-flex justify-content-center gap-5 py-4" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="card col-lg-3">
+                        <h1>slkfl</h1>
+                        <div class="card-body">
+                            <h5 class="card-title">The largest sports booking website in Morocco :</h5>
+                            <p class="card-text">R-Staduim lists several sports centers in Morocco. Find the sports activity of your choice in your region.</p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3">
+                        <h1>slkfl</h1>
+                        <div class="card-body">
+                            <h5 class="card-title">An unrivaled choice of sports activities :</h5>
+                            <p class="card-text">R-Stadium offers as many sports as possible: from football to bascketball, from tennis.</p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3">
+                        <h1>slkfl</h1>
+                        <div class="card-body">
+                            <h5 class="card-title">Simple & instant online booking :</h5>
+                            <p class="card-text">
+                                Check the availability of your activity in real time and book instantly online, 24/7, without ever moving around or picking up the phone.
+                                Our planning tool allows you to align your calendar with that of your colleagues to organize sports after-works with ease and conviviality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    NOS SERVICES
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    test2
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    VOS AVANTAGES
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    test3
+                </div>
+              </div>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="espace"></div>
+
     <!-- Contact -->
-    <div class="mt-5 pt-5" id="contact">
+    <div class="mt-5 py-5" id="contact">
         <div class="h1 text-center text-uppercase text-light mt-5">Contact Us</div>
         <form>
             <div class="row m-5 pt-5 d-flex justify-content-center align-items-center gap-3">
@@ -120,6 +315,9 @@
         </form>
     </div>
 
+    <div class="espace"></div>
+
+    <!-- Footer -->
     <footer class="text-light mt-5 py-5">
         <div class="d-lg-flex justify-content-around align-items-center gap-3">
             <div class="col-lg-5 d-flex flex-column px-4">
@@ -142,10 +340,11 @@
             </div>
             <div class="d-flex flex-column gap-3 text-center">
                 <div>&copy; Copyright 2022 R-Stadium</div>
-                <div class="d-flex text-light justify-content-center gap-3">
+                <div class="d-flex text-light justify-content-center gap-2">
                     <a class="bi bi-facebook nav-link text-light h1"></a>
                     <a class="bi bi-twitter nav-link text-light h1"></a>
                     <a class="bi bi-instagram nav-link text-light h1"></a>
+                    <a class="bi bi-linkedin nav-link text-light h1"></a>
                 </div>
             </div>
         </div>

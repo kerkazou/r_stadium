@@ -7,13 +7,11 @@
   --color-green-dark: #22C55E;
   --color-blue: #3B82F6;
 }
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 #page_top{
   width: 100%;
   height: 100vh;
@@ -22,7 +20,6 @@ body {
   background-position: center;
   background-size: cover;
 }
-
 select{
   padding-left: 10px;
   border-radius: 8px;
@@ -30,11 +27,51 @@ select{
   height: 50px;
 }
 
+.espace{
+  height: 100px;
+}
+
+/* About */
+#about{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/contact.gif);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#about .accordion{
+  width: 80%;
+}
+#about .accordion-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#about .card{
+  width: 32%;
+  min-height: 400px;
+  max-height: 400px;
+}
+#about p{
+  color: var(--color-dark);
+}
+#about .icon{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .icon i{
+  font-size: 100px;
+  color: var(--color-green-dark);
+}
 
 /* Gallery */
-.slide{
-  width: 100%;
-}
 #img_slide{
   width: 100%;
   overflow: hidden;
