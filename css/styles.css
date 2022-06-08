@@ -48,12 +48,12 @@ select{
   width: 80%;
 }
 #about .accordion-body{
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
 }
 #about .card{
-  width: 32%;
+  /* width: 32%; */
   min-height: 400px;
   max-height: 400px;
 }
@@ -92,6 +92,9 @@ select{
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #contact input{
   height: 50px;
