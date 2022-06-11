@@ -18,7 +18,7 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="connecter.html">LOG IN</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT ;?>/Login">LOG IN</a></li>
         </ul>
     </div>            
 </nav>

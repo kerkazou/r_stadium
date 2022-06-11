@@ -8,12 +8,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 <!--  -->
 
-<script src="<?php echo URLROOT; ?>/site/js/scripts.js"></script>
+<script src="<?php echo URLROOT; ?>/js/site.js"></script>
 
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-<script src="<?php echo URLROOT; ?>/site/WOW/dist/wow.js"></script>
+<script src="<?php echo URLROOT; ?>/WOW/dist/wow.js"></script>
 <script>
     wow = new WOW(
       {

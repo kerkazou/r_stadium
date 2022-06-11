@@ -40,9 +40,9 @@
             <div class="d-md-flex justify-content-center align-items-center gap-5 shadow-sm py-3 px-5 mt-5 mb-5 bg-body rounded" id="menu_stadium">
                 <div class="search_select_box">
                     <select class="selectpicker" data-live-search="true">
-                        <option>All the cities</option>
-                        <?php foreach ($data['citys'] as $city) : ?>
-                            <option value="<?php echo  $city->id ;?>"><?php echo  $city->city ;?></option>
+                        <option value="all">All sports</option>
+                        <?php foreach ($data['sports'] as $sport) : ?>
+                            <option value="<?php echo  $sport->id ;?>"><?php echo  $sport->sport ;?></option>
                         <?php endforeach ;?>
                     </select>
                 </div>
@@ -63,7 +63,7 @@
             <div id="cards_stadium" class="flex-wrap gap-4">
                 <?php foreach ($data['stadiums'] as $stadium) : ?>
                     <div class="card_stadium col-md-5 col-11 wow bounceInLeft" data-wow-delay="1s">
-                        <div class="img_stadium"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="Image"></div>
+                        <div class="img_stadium"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image"></div>
                         <div class="text-center">
                             <h2><?php echo $stadium->name ;?></h2>
                             <h5><?php echo $stadium->city.', '.$stadium->sport ;?></h5>
@@ -215,14 +215,14 @@
         
         <!-- Gallery -->
         <div id="gallery">
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image1"></div>
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image2"></div>
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image3"></div>
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image4"></div>
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image5"></div>
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image6"></div>
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image7"></div>
-            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/site/assets/slider1.jpg" alt="image8"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image1"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image2"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image3"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image4"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image5"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image6"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image7"></div>
+            <div class="col-lg-3 col-sm-6"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="image8"></div>
         </div>
 
         <!-- Contact -->
