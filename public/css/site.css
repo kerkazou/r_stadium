@@ -16,8 +16,8 @@ body {
 input[type="radio"]{
     -webkit-appearance : none;
     appearance         : none;
-    width              : 20px;
-    height             : 20px;
+    width              : 30px;
+    height             : 30px;
     margin             : calc(0.75em - 11px) 0.25rem 0 0;
     vertical-align     : top;
     border             : 2px solid #ddd;
@@ -203,8 +203,18 @@ input[type="radio"]:where(:active:not(:disabled), :focus){
 footer{
     width: 100%;
     background-color: var(--color-dark);
-  }
-  footer a:hover{
+}
+footer a:hover{
     text-decoration: underline;
     text-transform: uppercase;
-  }
+}
+
+
+/* parsley */
+.parsley-errors-list{
+    color: red !important;
+    list-style: none !important;
+}
+.parsley-required{
+    float: left !important;
+}
