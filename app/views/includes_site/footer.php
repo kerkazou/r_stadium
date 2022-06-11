@@ -8,6 +8,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 <!--  -->
 
+<!-- sweetalert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <!-- parsley -->
 <script src="<?php echo URLROOT; ?>/js/parsley.min.js"></script>
 

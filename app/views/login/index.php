@@ -60,7 +60,7 @@
                     </div>
                     <input type="submit" class="btn btn-lg btn-primary btn-lg col-md-5 col-8 mb-0" value="Register">
                 </form>
-                <p class="text-sm mt-3 mb-0">Don't have an account? <a href="#sign-up" class="text-dark font-weight-bolder">Sign in</a></p>
+                <p class="text-sm mt-3 mb-0">Don't have an account? <a href="<?php echo URLROOT ;?>/logins#sign_up" class="text-dark font-weight-bolder">Sign in</a></p>
             </div>
         </div>
 
@@ -93,7 +93,7 @@
                     </div>
                     <input type="submit" class="btn btn-lg btn-primary btn-lg col-md-5 col-8 mb-0" value="Register">
                 </form>
-                <p class="text-sm mt-3 mb-0">Already have an account? <a href="#sign-in" class="text-dark font-weight-bolder">Sign in</a></p>
+                <p class="text-sm mt-3 mb-0">Already have an account? <a href="<?php echo URLROOT ;?>/logins#sign_in" class="text-dark font-weight-bolder">Sign in</a></p>
             </div>
         </div>
     </section>
