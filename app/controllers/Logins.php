@@ -7,7 +7,11 @@ class Logins extends Controller {
     }
 
     public function index(){
-        $this->view('login/index');
+        if(!isset($_SESSION['user_id'])){
+            $this->view('login/index');
+        }else{
+            redirect('');
+        }
     }
 
     public function signup() {
@@ -71,7 +75,7 @@ class Logins extends Controller {
             if((!empty($data['email'])) && (!empty($data['password']))){
                 $login = $this->loginModel->signin($data);
                 if($login){
-                    $this->createUserSession($user);
+                    $this->createUserSession($login);
                     if(isset($_POST['rememberme'])){
                         $this->createUsercoockie($data);
                     }

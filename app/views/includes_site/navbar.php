@@ -18,7 +18,13 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT ;?>/Logins">LOG IN</a></li>
+            <?php if(!isset($_SESSION['user_id'])) echo '
+                <li class="nav-item"><a class="nav-link" href="'.URLROOT.'/Logins">Log in</a></li>
+            '; ?>
+            <?php if(isset($_SESSION['user_id'])) echo '
+                <li class="nav-item"><a class="nav-link" href="">'.$_SESSION['last_name'].' '.$_SESSION['first_name'].'</a></li>
+                <li class="nav-item"><a class="nav-link" href="'.URLROOT.'/Logins/logout">Logout</a></li>
+            '; ?>
         </ul>
-    </div>            
+    </div>
 </nav>
