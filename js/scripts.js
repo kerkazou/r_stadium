@@ -1,3 +1,12 @@
+// Home
+var currentIndex = 1;
+var totalCount = 5;
+setInterval(function() {
+    if (currentIndex > totalCount)
+        currentIndex = 1;
+        document.getElementById("header").style.backgroundImage = "url(assets/image" + currentIndex++ + ".png)";
+}, 5000);
+
 // NavBar
 var navbar = document.getElementById("navbar");
 var menu = document.getElementById("menu");
@@ -23,13 +32,3 @@ window.onscroll = function(){
         navbar.classList.add("py-2");
     }
 }
-
-
-// Home
-var currentIndex = 1;
-var totalCount = 5;
-setInterval(function() {
-    if (currentIndex > totalCount)
-        currentIndex = 1;
-        document.getElementById("page_top").style.backgroundImage = "url(assets/image" + currentIndex++ + ".png)";
-}, 5000);
