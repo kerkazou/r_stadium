@@ -51,7 +51,7 @@
                     <i class="fa-brands fa-google btn btn-outline-light shadow-sm p-3 bg-body rounded fs-1"></i>
                 </div>
                 <p class="text-sm font-weight-bold text-secondary">or</p>
-                <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/login/signup" data-parsley-validate>
+                <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/logins/signup" data-parsley-validate>
                     <input type="text" name="email" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Email*" required data-parsley-type="email">
                     <input type="password" name="password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3">
                     <div class="col-sm-10 col-11 form-check form-switch fs-5 d-flex align-items-center ms-5 my-2">
@@ -60,7 +60,7 @@
                     </div>
                     <input type="submit" class="btn btn-lg btn-primary btn-lg col-md-5 col-8 mb-0" value="Register">
                 </form>
-                <p class="text-sm mt-3 mb-0">Don't have an account? <a href="<?php echo URLROOT ;?>/login#sign-up" class="text-dark font-weight-bolder">Sign in</a></p>
+                <p class="text-sm mt-3 mb-0">Don't have an account? <a href="#sign-up" class="text-dark font-weight-bolder">Sign in</a></p>
             </div>
         </div>
 
@@ -73,7 +73,8 @@
                     <i class="fa-brands fa-google btn btn-outline-light shadow-sm p-3 bg-body rounded fs-1"></i>
                 </div>
                 <p class="text-sm font-weight-bold text-secondary">or</p>
-                <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/login/signup" data-parsley-validate>
+                <div id="error_sign_up"></div>
+                <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/logins/signup" data-parsley-validate>
                     <input type="text" name="first_name" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="First Name*" required data-parsley-minlength="3">
                     <input type="text" name="last_name" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Last Name*" required data-parsley-minlength="3">
                     <input type="text" name="email" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Email*" required data-parsley-type="email">
@@ -83,22 +84,23 @@
                     <div class="col-sm-10 col-11 d-flex flex-column">
                         <div>
                             <label class="fs-5 me-2" for="administrator">Administrator </label>
-                            <input type="radio" id="administrator" required>
+                            <input value="2" name="role" type="radio" id="administrator" required>
                         </div>
                         <div>
                             <label class="fs-5 me-2" for="player">Player </label>
-                            <input type="radio" id="player" required>
+                            <input value="3" name="role" type="radio" id="player" required>
                         </div>
                     </div>
                     <input type="submit" class="btn btn-lg btn-primary btn-lg col-md-5 col-8 mb-0" value="Register">
                 </form>
-                <p class="text-sm mt-3 mb-0">Already have an account? <a href="<?php echo URLROOT ;?>/login#sign-in" class="text-dark font-weight-bolder">Sign in</a></p>
+                <p class="text-sm mt-3 mb-0">Already have an account? <a href="#sign-in" class="text-dark font-weight-bolder">Sign in</a></p>
             </div>
         </div>
     </section>
 </body>
 
 <?php require APPROOT . '/views/includes_site/footer.php'; ?>
+
 
 
 <style>
