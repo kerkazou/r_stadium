@@ -34,8 +34,23 @@ class Login {
         $this->db->query('SELECT * FROM `user` WHERE email = :email');
         $this->db->bind(':email', $data['email']);
 
-        if($this->db->execute()){
+        $row = $this->db->single();
+        if($row){
             return true;
+        }else{
+            return false;
+        }
+    }
+    
+    
+    public function signin($data){
+        $this->db->query('SELECT * FROM `user` WHERE email = :email AND password = :password');
+        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':password', md5($data['password']));
+
+        $row = $this->db->single();
+        if($row){
+            return $row;
         }else{
             return false;
         }

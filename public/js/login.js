@@ -4,6 +4,7 @@ var btn_sign_in = document.getElementById('btn_sign_in');
 var btn_sign_up = document.getElementById('btn_sign_up');
 
 var error_sign_up = document.getElementById('error_sign_up');
+var error_sign_in = document.getElementById('error_sign_in');
 
 btn_sign_in.addEventListener('click', (e) => {
     sign_in_active();
@@ -54,9 +55,13 @@ if(urlParts[1] == 'email_error'){
     error_sign_up.innerHTML = "<p style='color: red;'>You can't use this email try again another email.</p>";
     sign_up_active();
 }
+if(urlParts[1] == 'error'){
+    window.location.href=urlParts[0];
+    error_sign_in.innerHTML = "<p style='color: red;'>Email or password is incorrect.</p>";
+    sign_in_active();
+}
 if(urlParts[1] == 'successful'){
     window.location.href=urlParts[0];
-    // sign_in_active();
     Swal.fire({
         position: '',
         icon: 'success',

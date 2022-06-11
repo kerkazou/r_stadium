@@ -53,10 +53,10 @@
                 <p class="text-sm font-weight-bold text-secondary">or</p>
                 <div id="error_sign_in"></div>
                 <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/logins/signin" data-parsley-validate>
-                    <input type="text" name="email" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Email*" required data-parsley-type="email">
-                    <input type="password" name="password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3">
+                    <input type="text" name="email" value="<?php if(isset($_COOKIE['email'])) echo $_COOKIE['email']; ?>" class="form-control form-control-lg col-sm-10 col-11 my-2"  placeholder="Email*" required data-parsley-type="email">
+                    <input type="password" name="password" value="<?php if(isset($_COOKIE['password'])) echo $_COOKIE['password']; ?>" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3">
                     <div class="col-sm-10 col-11 form-check form-switch fs-5 d-flex align-items-center ms-5 my-2">
-                        <input class="form-check-input" style="" name="rememberme" type="checkbox" id="rememberme">
+                        <input class="form-check-input" name="rememberme" type="checkbox" id="rememberme">
                         <label class="form-check-label" for="rememberme">Remember me</label>
                     </div>
                     <input type="submit" class="btn btn-lg btn-primary btn-lg col-md-5 col-8 mb-0" value="Register">
