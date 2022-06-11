@@ -51,7 +51,8 @@
                     <i class="fa-brands fa-google btn btn-outline-light shadow-sm p-3 bg-body rounded fs-1"></i>
                 </div>
                 <p class="text-sm font-weight-bold text-secondary">or</p>
-                <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/logins/signup" data-parsley-validate>
+                <div id="error_sign_in"></div>
+                <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/logins/signin" data-parsley-validate>
                     <input type="text" name="email" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Email*" required data-parsley-type="email">
                     <input type="password" name="password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3">
                     <div class="col-sm-10 col-11 form-check form-switch fs-5 d-flex align-items-center ms-5 my-2">

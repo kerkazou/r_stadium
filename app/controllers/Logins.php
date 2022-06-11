@@ -25,11 +25,15 @@ class Logins extends Controller {
             ];
             if((!empty($data['first_name'])) && (!empty($data['last_name'])) && (!empty($data['email'])) && (!empty($data['phone'])) && (!empty($data['password'])) && (!empty($data['conf_password'])) && (!empty($data['role']))){
                 if($data['password'] == $data['conf_password']){
-                    $login = $this->loginModel->signup($data);
-                    if($login){
-                        redirect('Logins#sign_in?successful');
-                    }else if($login == false){
-                        redirect('Logins#sign_up?repeat_signup');
+                    if(!($this->loginModel->userExists($data))){
+                        $login = $this->loginModel->signup($data);
+                        if($login){
+                            redirect('Logins#sign_in?successful');
+                        }else if($login == false){
+                            redirect('Logins#sign_up?repeat_signup');
+                        }
+                    }else{
+                        redirect('Logins#sign_in?email_error');
                     }
                 }else{
                     redirect('Logins#sign_up?confirm_signup');

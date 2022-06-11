@@ -49,6 +49,11 @@ if(urlParts[1] == 'fill_signup'){
     error_sign_up.innerHTML = '<p style="color: red;">Please, fill all the file.</p>';
     sign_up_active();
 }
+if(urlParts[1] == 'email_error'){
+    window.location.href=urlParts[0];
+    error_sign_up.innerHTML = "<p style='color: red;'>You can't use this email try again another email.</p>";
+    sign_up_active();
+}
 if(urlParts[1] == 'successful'){
     window.location.href=urlParts[0];
     // sign_in_active();
