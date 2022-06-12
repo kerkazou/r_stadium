@@ -11,5 +11,9 @@
   <link href="<?php echo URLROOT; ?>/css/nucleo-svg.css" rel="stylesheet"/>
   <link id="pagestyle" href="<?php echo URLROOT; ?>/css/argon-dashboard.css?v=2.0.2" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <!--  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
   <title>R-Stadium</title>
 </head>

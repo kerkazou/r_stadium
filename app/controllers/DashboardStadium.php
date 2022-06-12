@@ -14,7 +14,12 @@ class DashboardStadium extends Controller {
         'sports' => $sports,
         'citys' => $citys,
     ];
-    $this->view('dashboardStadium/index');
+    $this->view('dashboardStadium/index' , $data);
+  }
+
+
+  public function add(){
+    var_dump($_POST);
   }
 
 }
