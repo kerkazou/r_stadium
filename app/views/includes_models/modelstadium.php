@@ -12,7 +12,6 @@
             <div class="w-100 d-flex gap-3">
               <div class="search_select_box w-50">
                 <select class="selectpicker w-100" data-live-search="true">
-                    <option value="all">All sports*</option>
                     <?php foreach ($data['sports'] as $sport) : ?>
                         <option value="<?php echo  $sport->id ;?>"><?php echo  $sport->sport ;?></option>
                     <?php endforeach ;?>
@@ -20,7 +19,6 @@
               </div>
               <div class="search_select_box w-50">
                 <select class="selectpicker w-100" data-live-search="true">
-                    <option>All the cities*</option>
                     <?php foreach ($data['citys'] as $city) : ?>
                         <option value="<?php echo  $city->id ;?>"><?php echo  $city->city ;?></option>
                     <?php endforeach ;?>
