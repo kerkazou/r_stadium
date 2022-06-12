@@ -68,7 +68,7 @@
                             <h2><?php echo $stadium->name ;?></h2>
                             <h5><?php echo $stadium->city.', '.$stadium->sport ;?></h5>
                             <h5><?php echo $stadium->site_web ;?></h5>
-                            <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Reserve</a>
+                            <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Book Now</a>
                         </div>
                         <div class="img_stadium"><?php echo $stadium->location ;?></div>
                     </div>

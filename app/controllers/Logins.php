@@ -9,7 +9,8 @@ class Logins extends Controller {
     public function index(){
         if(!isset($_SESSION['user_id'])){
             $this->view('login/index');
-        }else{
+        }
+        else{
             redirect('');
         }
     }
