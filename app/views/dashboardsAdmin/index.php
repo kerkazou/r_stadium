@@ -20,7 +20,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="mb-5 fs-4 text-uppercase font-weight-bold">number of stadiums</p>
-                    <h5 class="font-weight-bolder fs-3">0</h5>
+                    <h5 class="font-weight-bolder fs-3"><?php echo $data['numberstadiums'] ?></h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -40,7 +40,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="mb-5 fs-4 text-uppercase font-weight-bold">number of bookens</p>
-                    <h5 class="font-weight-bolder fs-3">0</h5>
+                    <h5 class="font-weight-bolder fs-3"><?php echo $data['numberbookens'] ?></h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">

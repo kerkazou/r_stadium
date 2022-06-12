@@ -37,7 +37,7 @@
           </a>
             <ul class="navbar-nav collapse" id="collapseExample" style="width: 80%; margin-left: 10%;">
               <li class="nav-item">
-                <a class="nav-link <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/dashboardStadium/index') echo'active'; ?>" href="<?php echo URLROOT ;?>/dashboardStadium">
+                <a class="nav-link <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/dashboardStadium') echo'active'; ?>" href="<?php echo URLROOT ;?>/dashboardStadium">
                   <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="bi bi-table text-secondary text-sm opacity-10"></i>
                   </div>
@@ -45,7 +45,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardBooken/index') echo'active'; ?>" href="<?php echo URLROOT ;?>/DashboardBooken">
+                <a class="nav-link <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardBooken') echo'active'; ?>" href="<?php echo URLROOT ;?>/DashboardBooken">
                   <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="bi bi-calendar3-range text-secondary text-sm opacity-10"></i>
                   </div>

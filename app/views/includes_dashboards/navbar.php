@@ -5,10 +5,10 @@
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Pages</a></li>
             <li class="breadcrumb-item text-sm text-white active" aria-current="page">
-                <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardAdmin') echo'Dashboard'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardAdmin/profiles') echo'Profile'; else echo 'Table'; ?>
+                <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardAdmin') echo'Dashboard'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardProfile') echo'Profile'; else echo 'Table'; ?>
             </li>
         </ol>
-        <h6 class="font-weight-bolder text-white mb-0"><?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardAdmin') echo'Dashboard'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardAdmin/profiles') echo'Profile';?></h6>
+        <h6 class="font-weight-bolder text-white mb-0"><?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardAdmin') echo'Dashboard'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardProfile') echo'Profile'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/dashboardStadium') echo'Stadium'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardBooken') echo'Booken';?></h6>
     </nav>
     <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
         <ul class="navbar-nav justify-content-end">

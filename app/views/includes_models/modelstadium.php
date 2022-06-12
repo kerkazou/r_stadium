@@ -1,51 +1,39 @@
-<!-- Modal Add Etudiant -->
+<!-- Modal Addition Stadium -->
 <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajout Etudiant</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Addition Stadium</h5>
         <p class="text-danger text-center"><?php if(isset($data['error'])){ echo $data['error'] ;} ?> </p>
       </div>
       <form method="POST" action="<?php echo URLROOT ;?>/Etudiants/add" data-parsley-validate>
-        <div class="modal-body">
-          <div class="modal-body d-flex gap-3">
-            <div class="w-75">
-              <input class="form-control" name="username" type="text" placeholder="Usermane" required data-parsley-minlength="3">
+        <div class="d-flex flex-wrap gap-3 modal-body">
+            <input class="w-100 form-control" name="name" type="text" placeholder="Name" required data-parsley-minlength="3">
+            <div class="w-100 d-flex gap-3">
+              <div class="search_select_box">
+                <select class="selectpicker" data-live-search="true">
+                    <option value="all">All sports</option>
+                    <?php foreach ($data['sports'] as $sport) : ?>
+                        <option value="<?php echo  $sport->id ;?>"><?php echo  $sport->sport ;?></option>
+                    <?php endforeach ;?>
+                </select>
+              </div>
+              <div class="search_select_box">
+                <select class="selectpicker" data-live-search="true">
+                    <option>All the cities</option>
+                    <?php foreach ($data['citys'] as $city) : ?>
+                        <option value="<?php echo  $city->id ;?>"><?php echo  $city->city ;?></option>
+                    <?php endforeach ;?>
+                </select>
+              </div>
             </div>
-            <div class="w-25">
-              <select class="form-select" name="genre" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-body d-flex gap-3">
-            <div class="w-75">
-              <input class="form-control" name="email" type="email" placeholder="Email Adress" required data-parsley-type="email">
-            </div>
-            <div class="w-25">
-              <select class="form-select" name="class" required>
-                <option value="1">Class 1</option>
-                <option value="2">Class 2</option>
-                <option value="3">Class 3</option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-body d-flex align-items-center gap-3">
-            <div class="w-75">
-              <input class="form-control" name="parent" type="text" placeholder="Parent" required data-parsley-minlength="3">
-            </div>
-            <div class="w-25">
-              <input class="form-control" name="date_de_naissance" type="date" placeholder="Date de naissance" required>
-            </div>
-          </div>
-          <div class="modal-body">
-            <textarea class="form-control" name="adresse" placeholder="Adresse" required></textarea>
-          </div>
+            <input class="w-100 form-control" name="location" type="text" placeholder="Location" required>
+            <input class="w-100 form-control" name="site_web" type="text" placeholder="Site Web" data-parsley-type="url">
+            <textarea class="w-100 form-control" name="description" placeholder="Description"></textarea>
         </div>
         <div class="modal-footer pb-0">
           <input type="button" class="btn btn-secondary" value="Close" data-bs-dismiss="modal">
-          <input type="submit" class="btn btn-primary" value="Save changes">
+          <input type="submit" class="btn btn-primary" value="Addition Stadium">
         </div>
       </form>
     </div>
