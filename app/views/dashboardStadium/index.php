@@ -36,22 +36,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <?php //foreach ($data['etudiants'] as $etudiant) : ?>
+                    <?php foreach ($data['stadiums'] as $stadium) : ?>
                         <tr class="item">
-                          <td class="d-none id">$id</td>
-                          <td class="col-1 name">$name</td>
-                          <td class="col-1 city">$city</td>
-                          <td class="col-1 sport">$sport</td>
-                          <td class="col-2 location">$location</td>
-                          <td class="col-2 description">$description</td>
-                          <td class="col-2 site_web">$site_web</td>
+                          <td class="d-none id"><?php echo  $stadium->id ;?></td>
+                          <td class="col-1 name"><?php echo  $stadium->name ;?></td>
+                          <td class="col-1 city"><?php echo  $stadium->city ;?></td>
+                          <td class="col-1 sport"><?php echo  $stadium->sport ;?></td>
+                          <td class="col-2 location"><?php echo  $stadium->location ;?></td>
+                          <td class="col-2 description"><?php echo  $stadium->description ;?></td>
+                          <td class="col-2 site_web"><?php echo  $stadium->site_web ;?></td>
                           <td class="col-2">
                               <a class="edit" type="button" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square text-success"></i></a>
-                              <a href="<?php //echo URLROOT ;?>/Etudiants/delete?etudiant=<?php //echo  $etudiant->id ;?>"><i class="bi bi-trash text-success"></i></a>
+                              <a href="<?php echo URLROOT ;?>/Etudiants/delete?etudiant=<?php echo  $stadium->id ;?>"><i class="bi bi-trash text-success"></i></a>
                             </ul>
                           </td>
                         </tr>
-                        <?php //endforeach ;?>
+                        <?php endforeach ;?>
                   </tbody>
                 </table>
               </div>
