@@ -37,28 +37,67 @@
         <!-- Reservation -->
         <div class="py-4" id="reservation">
             <!-- Menu Reservation -->
-            <div class="d-md-flex justify-content-center align-items-center gap-5 shadow-sm py-3 px-5 mt-5 mb-5 bg-body rounded" id="menu_stadium">
+            <div class="d-md-flex justify-content-center align-items-center gap-3 shadow-sm py-3 px-3 mt-5 mb-5 bg-body rounded" id="menu_stadium">
                 <div class="search_select_box">
-                    <select class="selectpicker" data-live-search="true">
-                        <option value="all">All sports</option>
+                    <select class="selectpicker" data-live-search="true" id="sport">
+                        <option value="0">All sports</option>
                         <?php foreach ($data['sports'] as $sport) : ?>
                             <option value="<?php echo  $sport->id ;?>"><?php echo  $sport->sport ;?></option>
                         <?php endforeach ;?>
                     </select>
                 </div>
                 <div class="search_select_box">
-                    <select class="selectpicker" data-live-search="true">
-                        <option>All the cities</option>
+                    <select class="selectpicker" data-live-search="true" id="city">
+                        <option value="0">All the cities</option>
                         <?php foreach ($data['citys'] as $city) : ?>
                             <option value="<?php echo  $city->id ;?>"><?php echo  $city->city ;?></option>
                         <?php endforeach ;?>
                     </select>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Username" style="height: 50px;">
+                    <input type="text" id="name_stadium" class="form-control" placeholder="Username" style="height: 50px;">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
                 </div>
+                <button class="btn btn-lg find_now" type="button" id="btn_reservation">Find Now</button>
             </div>
+        <script>
+            // const city = document.querySelector('#city');
+            // const sport = document.querySelector('#sport');
+            // city.addEventListener('change', function(){
+            //     var city = `${event.target.value}`;
+            //     $.ajax({
+            //         url:'<?php//URLROOT?>/Site/ajax',
+            //         method:'POST',
+            //         data:{city:city},
+            //         success:function(data){
+            //             console.log(data);
+            //         }
+            //     });
+            // });
+
+            const find_now = document.querySelector('.find_now');
+            
+            find_now.addEventListener('click', function(){
+                var sport = document.querySelector('#sport').value;
+                var city = document.querySelector('#city').value;
+                var name_stadium = document.querySelector('#name_stadium').value;
+                $.ajax({
+                    url:'<?=URLROOT?>/Site/ajax',
+                    method:'POST',
+                    data:{
+                        sport:sport,
+                        city:city,
+                        name_stadium:name_stadium,
+                    },
+                    success:function(data){
+                        console.log(data);
+                        let stadiums=JSON.parse(data);
+                        console.log(stadiums);
+                        // console.log(stadiums[0].name);
+                    }
+                });
+            });
+        </script>
             <!-- Card Reservation -->
             <div id="cards_stadium" class="flex-wrap gap-4">
                 <?php foreach ($data['stadiums'] as $stadium) : ?>
