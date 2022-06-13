@@ -21,31 +21,18 @@ class Stadium {
     }
 
     public function getSelectedStadiums($data){
-        if($data['sport']==0 && $data['city']==0 && empty($data['name_stadium'])){
-            echo json_encode( $this->getStadiums());
-        }
-        elseif($data['sport']!==0 && $data['city']!==0 && !empty($data['name_stadium']) ){
-    //         $sql = "SELECT"
-
-    // . "    *"
-
-    // . "FROM"
-
-    // . "    stadium"
-
-    // . "INNER JOIN sport ON stadium.sport = sport.id\n"
-
-    // . "INNER JOIN city ON stadium.city = city.id\n"
-
-    // . "WHERE\n"
-
-    // . "    stadium.sport = 1 \n"
-
-    // . "    AND stadium.city = 55\n"
-
-    // . "    AND stadium.name LIKE  \'%a\';";
-            echo json_encode($this->get('SELECT * FROM stadium INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.sport ='.$data['sport'].' AND stadium.city='.$data['city'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\''));
-        }
+        // if($data['sport']==0 && $data['city']==0){
+        //     echo json_encode( $this->get('SELECT * FROM stadium INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id WHERE stadium.name LIKE \'%'.$data['name_stadium'].'%\''));
+        // }
+        // elseif($data['sport']!==0 && $data['city']!==0){
+        //     echo json_encode($this->get('SELECT * FROM stadium INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.sport ='.$data['sport'].' AND stadium.city='.$data['city'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\''));
+        // }
+        // elseif($data['sport']!==0 && $data['city']==0){
+        //     echo json_encode($this->get('SELECT * FROM stadium INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.sport ='.$data['sport'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\''));
+        // }
+        // elseif($data['sport']==0 && $data['city']!==0){
+        //     echo json_encode($this->get('SELECT * FROM stadium INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.city='.$data['city'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\''));
+        // }
     }
 
     public function numberStadiums(){
