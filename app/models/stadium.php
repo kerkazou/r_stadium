@@ -14,4 +14,10 @@ class Stadium {
         return $result;
     }
 
+    public function numberStadiums(){
+        $this->getStadiums();
+        $result = $this->db->rowCount();
+        return $result;
+    }
+
 }

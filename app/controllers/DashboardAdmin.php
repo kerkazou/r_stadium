@@ -3,8 +3,8 @@
 class DashboardAdmin extends Controller {
 
   public function __construct() {
-    $this->stadiumModel = $this->model('dashboardStadium');
-    $this->bookenModel = $this->model('dashboardBooken');
+    $this->stadiumModel = $this->model('Stadium');
+    $this->bookenModel = $this->model('Booken');
   }
 
   public function index(){
