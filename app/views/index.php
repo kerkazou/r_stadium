@@ -80,6 +80,9 @@
                         let stadiums=JSON.parse(data);
                         const cards_stadium = document.querySelector('#cards_stadium');
                         cards_stadium.innerHTML = '';
+                        if(stadiums.length==0){
+                            cards_stadium.innerHTML = '<h2 class="text-light fw-bold">Reselt, note found.</h2>';
+                        }else
                         stadiums.forEach(stad=>{
                             let card=document.createElement('div');
                             card.className="card_stadium col-md-5 col-11 wow bounceInLeft";
@@ -89,12 +92,13 @@
                                             <img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image">
                                         </div>
                                         <div class="text-center">
-                                            <h2>${stad.name}</h2>
-                                            <h5>${stad.city}.${stad.sport}</h5>
-                                            <h5>${stad.site_web}</h5>
+                                            <h2>${stad.stadium_id}</h2>
+                                            <h2>${stad.stadium_name}</h2>
+                                            <h5>${stad.stadium_city}.${stad.stadium_sport}</h5>
+                                            <h5>${stad.stadium_site_web}</h5>
                                             <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Book Now</a>
                                         </div>
-                                        <div class="img_stadium">${stad.location}</div>
+                                        <div class="img_stadium">${stad.stadium_location}</div>
                             `;
                             cards_stadium.appendChild(card);
                         })

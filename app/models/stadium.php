@@ -58,16 +58,48 @@ class Stadium {
     public function getSelectedStadiums($data){
         
         if($data['sport'] == 0 && $data['city']== 0){
-           return $this->get('SELECT * FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id WHERE stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
+           return $this->get('SELECT 
+            stadium.id as stadium_id,
+            stadium.name as stadium_name,
+            city.city as stadium_city,
+            sport.sport as stadium_sport,
+            stadium.location as stadium_location,
+            stadium.description as stadium_description,
+            stadium.site_web as stadium_site_web
+            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id WHERE stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
         }
         if($data['sport']!==0 && $data['city']==0){
-           return $this->get('SELECT * FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.sport ='.$data['sport'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
+           return $this->get('SELECT 
+            stadium.id as stadium_id,
+            stadium.name as stadium_name,
+            city.city as stadium_city,
+            sport.sport as stadium_sport,
+            stadium.location as stadium_location,
+            stadium.description as stadium_description,
+            stadium.site_web as stadium_site_web
+            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.sport ='.$data['sport'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
         }
         if($data['sport']==0 && $data['city']!==0){
-           return $this->get('SELECT * FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.city='.$data['city'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
+           return $this->get('SELECT 
+            stadium.id as stadium_id,
+            stadium.name as stadium_name,
+            city.city as stadium_city,
+            sport.sport as stadium_sport,
+            stadium.location as stadium_location,
+            stadium.description as stadium_description,
+            stadium.site_web as stadium_site_web
+            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.city='.$data['city'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
         }
         if($data['sport']!==0 && $data['city']!==0){
-           return $this->get('SELECT * FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.sport ='.$data['sport'].' AND stadium.city='.$data['city'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
+           return $this->get('SELECT 
+            stadium.id as stadium_id,
+            stadium.name as stadium_name,
+            city.city as stadium_city,
+            sport.sport as stadium_sport,
+            stadium.location as stadium_location,
+            stadium.description as stadium_description,
+            stadium.site_web as stadium_site_web
+            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id  WHERE stadium.sport ='.$data['sport'].' AND stadium.city='.$data['city'].' AND stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
         }
     }
 

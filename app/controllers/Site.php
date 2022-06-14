@@ -35,8 +35,7 @@ class Site extends Controller{
             if($stadiums){
                 $response= $stadiums;
             }else if($stadiums == false){
-                 $data['error'] = 'Reselt, note found.';
-                $response= $data;
+                $response= [];
             }
             echo json_encode($response);
         }
