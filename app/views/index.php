@@ -108,12 +108,12 @@
                     <div class="card_stadium col-md-5 col-11 wow bounceInLeft" data-wow-delay="1s">
                         <div class="img_stadium"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image"></div>
                         <div class="text-center">
-                            <h2><?php echo $stadium->name ;?></h2>
-                            <h5><?php echo $stadium->city.', '.$stadium->sport ;?></h5>
-                            <h5><?php echo $stadium->site_web ;?></h5>
+                            <h2><?php echo $stadium->stadium_name ;?></h2>
+                            <h5><?php echo $stadium->stadium_city.', '.$stadium->stadium_sport ;?></h5>
+                            <h5><?php echo $stadium->stadium_site_web ;?></h5>
                             <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Book Now</a>
                         </div>
-                        <div class="img_stadium"><?php echo $stadium->location ;?></div>
+                        <div class="img_stadium"><?php echo $stadium->stadium_location ;?></div>
                     </div>
                 <?php endforeach ;?>
             </div>

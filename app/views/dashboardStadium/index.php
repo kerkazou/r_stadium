@@ -38,7 +38,7 @@
                   <tbody>
                     <?php foreach ($data['stadiums'] as $stadium) : ?>
                         <tr class="item">
-                          <td class="id"><?php echo  $stadium->staduim_id ;?></td>
+                          <td class="id"><?php echo  $stadium->stadium_id ;?></td>
                           <td class="col-1 name"><?php echo  $stadium->stadium_name ;?></td>
                           <td class="col-1 city"><?php echo  $stadium->stadium_city ;?></td>
                           <td class="col-1 sport"><?php echo  $stadium->stadium_sport ;?></td>

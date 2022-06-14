@@ -16,7 +16,7 @@ class Stadium {
 
     public function getStadiums(){
         $this->db->query('SELECT 
-            stadium.id as staduim_id,
+            stadium.id as stadium_id,
             stadium.name as stadium_name,
             city.city as stadium_city,
             sport.sport as stadium_sport,
