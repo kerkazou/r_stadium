@@ -15,7 +15,15 @@ class Stadium {
     }
 
     public function getStadiums(){
-        $this->db->query('SELECT * FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id');
+        $this->db->query('SELECT 
+            stadium.id as staduim_id,
+            stadium.name as stadium_name,
+            city.city as stadium_city,
+            sport.sport as stadium_sport,
+            stadium.location as stadium_location,
+            stadium.description as stadium_description,
+            stadium.site_web as stadium_site_web
+            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id');
         $result = $this->db->resultSet();
         return $result;
     }

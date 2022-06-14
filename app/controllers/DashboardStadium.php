@@ -70,8 +70,6 @@ class DashboardStadium extends Controller {
             'id' => $_GET['id'],
             'error' => ''
         ];
-        echo $data['id'];
-        exit();
         $stadium = $this->stadiumModel->delet($data);
         if($stadium){
             redirect('dashboardStadium');
