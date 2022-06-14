@@ -53,7 +53,39 @@ class Stadium {
         }else{
             return false;
         }
-      }
+    }
+
+    public function editStadium($data) {
+        $sport = $this->getIdSport($data['sport']);
+        $city = $this->getIdcity($data['city']);
+        // var_dump($city);
+        // echo $sport[0]->sport_id;
+
+        // exit();
+        $this->db->query('UPDATE `stadium` SET `name`=:name , `sport`=:sport , `city`=:city , `location`=:location , `site_web`=:site_web , `description`=:description WHERE `id`=:id');
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':sport', $sport[0]->sport_id);
+        $this->db->bind(':city', $city[0]->city_id);
+        $this->db->bind(':location', $data['location']);
+        $this->db->bind(':site_web', $data['site_web']);
+        $this->db->bind(':description', $data['description']);
+
+        $this->db->execute();
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function getIdSport($sport){
+        return $this->get('SELECT sport.id as sport_id FROM `sport` WHERE sport LIKE \'%'.$sport.'%\'');
+    }
+    
+    public function getIdCity($city){
+        return $this->get('SELECT city.id as city_id FROM `city` WHERE city LIKE \'%'.$city.'%\'');
+    }
 
     public function getSelectedStadiums($data){
         

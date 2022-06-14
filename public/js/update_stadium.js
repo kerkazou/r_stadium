@@ -9,8 +9,6 @@ document.querySelectorAll('.btn-edit').forEach(function(btn){
         let stadium_description = select.querySelector('.stadium_description').innerHTML;
         let stadium_site_web = select.querySelector('.stadium_site_web').innerHTML;
 
-        console.log(stadium_id);
-
         document.querySelector('#editModal .id').value = stadium_id;
         document.querySelector('#editModal .name').value = stadium_name;
         document.querySelector('#editModal .city').value = stadium_city;

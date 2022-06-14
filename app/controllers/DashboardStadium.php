@@ -77,6 +77,36 @@ class DashboardStadium extends Controller {
             redirect('dashboardStadium');
         }
     }
-}
+  }
+
+  public function editStadium() {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); 
+      $data = [
+          'id' => $_POST['id'],
+          'name' => trim($_POST['name']),
+          'sport' => trim($_POST['sport']),
+          'city' => trim($_POST['city']),
+          'location' => $_POST['location'],
+          'site_web' => $_POST['site_web'],
+          'description' => $_POST['description'],
+          'error' => ''
+      ];
+      if((!empty($data['name'])) && (!empty($data['sport'])) && (!empty($data['city']))){
+        $addStadium = $this->stadiumModel->editStadium($data);
+        if($addStadium){
+          $data['error'] = 'Stadium has been added successfully.';
+          redirect('dashboardStadium');
+        }else if($addStadium == false){
+          $data['error'] = 'Error, Please Repeat again.';
+          redirect('dashboardStadium');
+        }
+      }
+      else{
+        $data['error'] = 'Error, Please Repeat again.';
+        redirect('dashboardStadium');
+      }
+    }
+  }
 
 }
