@@ -61,22 +61,8 @@
                 <button class="btn btn-lg find_now" type="button" id="btn_reservation">Find Now</button>
             </div>
         <script>
-            // const city = document.querySelector('#city');
-            // const sport = document.querySelector('#sport');
-            // city.addEventListener('change', function(){
-            //     var city = `${event.target.value}`;
-            //     $.ajax({
-            //         url:'<?php//URLROOT?>/Site/ajax',
-            //         method:'POST',
-            //         data:{city:city},
-            //         success:function(data){
-            //             console.log(data);
-            //         }
-            //     });
-            // });
-
-            const find_now = document.querySelector('.find_now');
             
+            const find_now = document.querySelector('.find_now');
             find_now.addEventListener('click', function(){
                 var sport = document.querySelector('#sport').value;
                 var city = document.querySelector('#city').value;
@@ -92,8 +78,26 @@
                     success:function(data){
                         console.log(data);
                         let stadiums=JSON.parse(data);
-                        console.log(stadiums);
-                        // console.log(stadiums[0].name);
+                        const cards_stadium = document.querySelector('#cards_stadium');
+                        cards_stadium.innerHTML = '';
+                        stadiums.forEach(stad=>{
+                            let card=document.createElement('div');
+                            card.className="card_stadium col-md-5 col-11 wow bounceInLeft";
+                            card.dataset.wowDelay="1s";
+                            card.innerHTML=`
+                                        <div class="img_stadium">
+                                            <img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image">
+                                        </div>
+                                        <div class="text-center">
+                                            <h2>${stad.name}</h2>
+                                            <h5>${stad.city}.${stad.sport}</h5>
+                                            <h5>${stad.site_web}</h5>
+                                            <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Book Now</a>
+                                        </div>
+                                        <div class="img_stadium">${stad.location}</div>
+                            `;
+                            cards_stadium.appendChild(card);
+                        })
                     }
                 });
             });

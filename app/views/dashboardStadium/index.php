@@ -47,7 +47,7 @@
                           <td class="col-2 site_web"><?php echo  $stadium->site_web ;?></td>
                           <td class="col-2">
                               <a class="edit" type="button" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square text-success"></i></a>
-                              <a href="<?php echo URLROOT ;?>/Etudiants/delete?etudiant=<?php echo  $stadium->id ;?>"><i class="bi bi-trash text-success"></i></a>
+                              <a href="<?php echo URLROOT ;?>/dashboardStadium/delet?id=<?php echo  $stadium->id ;?>"><i class="bi bi-trash text-success"></i></a>
                             </ul>
                           </td>
                         </tr>

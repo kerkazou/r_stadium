@@ -31,12 +31,14 @@ class Site extends Controller{
                 'error' => ''
             ];
             $stadiums = $this->stadiumModel->getSelectedStadiums($data);
+            $response='';
             if($stadiums){
-                return $stadiums;
+                $response= $stadiums;
             }else if($stadiums == false){
-                $data['error'] = 'Reselt, note found.';
-                return $data;
+                 $data['error'] = 'Reselt, note found.';
+                $response= $data;
             }
+            echo json_encode($response);
         }
     } 
     
