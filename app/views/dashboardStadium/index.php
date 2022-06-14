@@ -38,16 +38,16 @@
                   <tbody>
                     <?php foreach ($data['stadiums'] as $stadium) : ?>
                         <tr class="item">
-                          <td class="id"><?php echo  $stadium->stadium_id ;?></td>
-                          <td class="col-1 name"><?php echo  $stadium->stadium_name ;?></td>
-                          <td class="col-1 city"><?php echo  $stadium->stadium_city ;?></td>
-                          <td class="col-1 sport"><?php echo  $stadium->stadium_sport ;?></td>
-                          <td class="col-2 location"><?php echo  $stadium->stadium_location ;?></td>
-                          <td class="col-2 description"><?php echo  $stadium->stadium_description ;?></td>
-                          <td class="col-2 site_web"><?php echo  $stadium->stadium_site_web ;?></td>
+                          <td class="d-none stadium_id"><?php echo  $stadium->stadium_id ;?></td>
+                          <td class="col-1 stadium_name"><?php echo  $stadium->stadium_name ;?></td>
+                          <td class="col-1 stadium_city"><?php echo  $stadium->stadium_city ;?></td>
+                          <td class="col-1 stadium_sport"><?php echo  $stadium->stadium_sport ;?></td>
+                          <td class="col-2 stadium_location"><?php echo  $stadium->stadium_location ;?></td>
+                          <td class="col-2 stadium_description"><?php echo  $stadium->stadium_description ;?></td>
+                          <td class="col-2 stadium_site_web"><?php echo  $stadium->stadium_site_web ;?></td>
                           <td class="col-2">
-                              <a class="edit" type="button" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square text-success"></i></a>
-                              <a href="<?php echo URLROOT ;?>/dashboardStadium/delet?id=<?php echo  $stadium->staduim_id ;?>"><i class="bi bi-trash text-success"></i></a>
+                              <a class="btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square text-success"></i></a>
+                              <a href="<?php echo URLROOT ;?>/dashboardStadium/delet?id=<?php echo  $stadium->stadium_id ;?>"><i class="bi bi-trash text-success"></i></a>
                             </ul>
                           </td>
                         </tr>
@@ -63,7 +63,6 @@
   </main>
 
   <?php require APPROOT . '/views/includes_dashboards/footer.php'; ?>
-  <script src="<?php echo URLROOT ;?>/js/update_etudiant.js"></script>
 
 
   <style>

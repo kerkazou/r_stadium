@@ -34,6 +34,8 @@
 
     <!-- Body -->
     <section>
+        <div>
+        </div>
         <!-- Reservation -->
         <div class="py-4" id="reservation">
             <!-- Menu Reservation -->
@@ -60,52 +62,50 @@
                 </div>
                 <button class="btn btn-lg find_now" type="button" id="btn_reservation">Find Now</button>
             </div>
-        <script>
-            
-            const find_now = document.querySelector('.find_now');
-            find_now.addEventListener('click', function(){
-                var sport = document.querySelector('#sport').value;
-                var city = document.querySelector('#city').value;
-                var name_stadium = document.querySelector('#name_stadium').value;
-                $.ajax({
-                    url:'<?=URLROOT?>/Site/ajax',
-                    method:'POST',
-                    data:{
-                        sport:sport,
-                        city:city,
-                        name_stadium:name_stadium,
-                    },
-                    success:function(data){
-                        console.log(data);
-                        let stadiums=JSON.parse(data);
-                        const cards_stadium = document.querySelector('#cards_stadium');
-                        cards_stadium.innerHTML = '';
-                        if(stadiums.length==0){
-                            cards_stadium.innerHTML = '<h2 class="text-light fw-bold">Reselt, note found.</h2>';
-                        }else
-                        stadiums.forEach(stad=>{
-                            let card=document.createElement('div');
-                            card.className="card_stadium col-md-5 col-11 wow bounceInLeft";
-                            card.dataset.wowDelay="1s";
-                            card.innerHTML=`
-                                        <div class="img_stadium">
-                                            <img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image">
-                                        </div>
-                                        <div class="text-center">
-                                            <h2>${stad.stadium_id}</h2>
-                                            <h2>${stad.stadium_name}</h2>
-                                            <h5>${stad.stadium_city}.${stad.stadium_sport}</h5>
-                                            <h5>${stad.stadium_site_web}</h5>
-                                            <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Book Now</a>
-                                        </div>
-                                        <div class="img_stadium">${stad.stadium_location}</div>
-                            `;
-                            cards_stadium.appendChild(card);
-                        })
-                    }
+            <script>
+                const find_now = document.querySelector('.find_now');
+                find_now.addEventListener('click', function(){
+                    var sport = document.querySelector('#sport').value;
+                    var city = document.querySelector('#city').value;
+                    var name_stadium = document.querySelector('#name_stadium').value;
+                    $.ajax({
+                        url:'<?=URLROOT?>/Site/ajax',
+                        method:'POST',
+                        data:{
+                            sport:sport,
+                            city:city,
+                            name_stadium:name_stadium,
+                        },
+                        success:function(data){
+                            console.log(data);
+                            let stadiums=JSON.parse(data);
+                            const cards_stadium = document.querySelector('#cards_stadium');
+                            cards_stadium.innerHTML = '';
+                            if(stadiums.length==0){
+                                cards_stadium.innerHTML = '<h2 class="text-light fw-bold">Reselt, note found.</h2>';
+                            }else
+                            stadiums.forEach(stad=>{
+                                let card=document.createElement('div');
+                                card.className="card_stadium col-md-5 col-11 wow bounceInLeft";
+                                card.dataset.wowDelay="1s";
+                                card.innerHTML=`   
+                                    <div class="img_stadium">
+                                        <img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image">
+                                    </div>
+                                    <div class="text-center">
+                                        <h2>${stad.stadium_name}</h2>
+                                        <h5>${stad.stadium_city}.${stad.stadium_sport}</h5>
+                                        <h5>${stad.stadium_site_web}</h5>
+                                        <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Book Now</a>
+                                    </div>
+                                    <div class="img_stadium">${stad.stadium_location}</div>
+                                `;
+                                cards_stadium.appendChild(card);
+                            })
+                        }
+                    });
                 });
-            });
-        </script>
+            </script>
             <!-- Card Reservation -->
             <div id="cards_stadium" class="flex-wrap gap-4">
                 <?php foreach ($data['stadiums'] as $stadium) : ?>
@@ -122,7 +122,7 @@
                 <?php endforeach ;?>
             </div>
         </div>
-
+         
         <!-- About -->
         <div class="py-5" id="about">
             <div class="h1 text-center text-uppercase text-light">About Us</div>
@@ -136,7 +136,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="d-flex flex-wrap justify-content-center align-items-center gap-5">
-                            <div class="card col-xl-3 col-md-5 col-sm-8 col-11 text-center border-0 h-100 py-5 shadow-sm">
+                            <div class="card col-xl-3 col-md-5 col-sm-8 col-11 text-center border-0 h-100 py-3 shadow-sm">
                                 <i class="fas fa-street-view icon"></i>
                                 <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
                                     <h5 class="card-title">The largest sports booking website in Morocco :</h5>
@@ -150,7 +150,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card col-xl-3 col-md-5 col-sm-8 col-11 text-center border-0 h-100 py-5 shadow-sm">
+                            <div class="card col-xl-3 col-md-5 col-sm-8 col-11 text-center border-0 h-100 py-3 shadow-sm">
                                 <i class="fas fa-volleyball-ball icon"></i>
                                 <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
                                     <h5 class="card-title">An unrivaled choice of sports activities :</h5>
@@ -163,7 +163,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card col-xl-3 col-md-5 col-sm-8 col-11 text-center border-0 h-100 py-5 shadow-sm">
+                            <div class="card col-xl-3 col-md-5 col-sm-8 col-11 text-center border-0 h-100 py-3 shadow-sm">
                                 <i class="fa-solid fa-bolt icon"></i>
                                 <div class="card-body my-0 my-sm-4 p-2 p-sm-3">
                                     <h5 class="card-title">Simple & instant online booking :</h5>

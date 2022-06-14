@@ -15,7 +15,7 @@ class Stadium {
     }
 
     public function getStadiums(){
-        $this->db->query('SELECT 
+        $this->db->query("SELECT  
             stadium.id as stadium_id,
             stadium.name as stadium_name,
             city.city as stadium_city,
@@ -23,7 +23,7 @@ class Stadium {
             stadium.location as stadium_location,
             stadium.description as stadium_description,
             stadium.site_web as stadium_site_web
-            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id');
+            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id"); 
         $result = $this->db->resultSet();
         return $result;
     }
@@ -65,7 +65,7 @@ class Stadium {
             sport.sport as stadium_sport,
             stadium.location as stadium_location,
             stadium.description as stadium_description,
-            stadium.site_web as stadium_site_web
+            stadium.site_web as stadium_site_web 
             FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id WHERE stadium.name LIKE \'%'.$data['name_stadium'].'%\'');
         }
         if($data['sport']!==0 && $data['city']==0){
