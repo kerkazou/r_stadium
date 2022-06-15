@@ -34,8 +34,6 @@
 
     <!-- Body -->
     <section>
-        <div>
-        </div>
         <!-- Reservation -->
         <div class="py-4" id="reservation">
             <!-- Menu Reservation -->
@@ -112,15 +110,18 @@
                     <div class="card_stadium col-md-5 col-11 wow bounceInLeft" data-wow-delay="1s">
                         <div class="img_stadium"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image"></div>
                         <div class="text-center">
-                            <h2><?php echo $stadium->stadium_name ;?></h2>
-                            <h5><?php echo $stadium->stadium_city.', '.$stadium->stadium_sport ;?></h5>
-                            <h5><?php echo $stadium->stadium_site_web ;?></h5>
-                            <a class="btn btn-lg mt-4" id="btn_reservation" href="#">Book Now</a>
+                            <h2 class="d-none stadium_id"><?php echo $stadium->stadium_id ;?></h2>
+                            <h2 class="stadium_name"><?php echo $stadium->stadium_name ;?></h2>
+                            <div class="d-flex"><h5 class="stadium_city"><?php echo $stadium->stadium_city?></h5>,<h5 class="stadium_sport"><?php echo $stadium->stadium_sport ;?></h5></div>
+                            <h5 class="stadium_site_web"><?php echo $stadium->stadium_site_web ;?></h5>
+                            <button class="btn btn-lg mt-4 btn_book_now" id="btn_reservation" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Book Now</button>
                         </div>
                         <div class="img_stadium"><?php echo $stadium->stadium_location ;?></div>
                     </div>
                 <?php endforeach ;?>
             </div>
+            <!-- includes_models -->
+            <?php require APPROOT . '/views/includes_models/modalsite.php'; ?>
         </div>
          
         <!-- About -->
@@ -294,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center"><button class="btn btn-primary btn-xl mt-5 text-uppercase" type="submit">Send Message</button></div>
+                <div class="text-center"><button class="btn btn-success btn-xl mt-5 text-uppercase" type="submit">Send Message</button></div>
             </form>
         </div>
     </section>
