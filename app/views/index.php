@@ -12,7 +12,7 @@
             <h3 class="text-center">Easily find a stadium or a sports club in Morocco</h3>
             <form action="" class="w-100 d-flex flex-wrap justify-content-center align-items-center gap-3">
                 <div class="search_select_box">
-                    <select class="selectpicker" data-live-search="true">
+                    <select class="selectpicker" data-live-search="true" id="sport_header">
                         <option value="all">All sports</option>
                         <?php foreach ($data['sports'] as $sport) : ?>
                             <option value="<?php echo  $sport->id ;?>"><?php echo  $sport->sport ;?></option>
@@ -20,14 +20,14 @@
                     </select>
                 </div>
                 <div class="search_select_box">
-                    <select class="selectpicker" data-live-search="true">
+                    <select class="selectpicker" data-live-search="true" id="city_header">
                         <option>All the cities</option>
                         <?php foreach ($data['citys'] as $city) : ?>
                             <option value="<?php echo  $city->id ;?>"><?php echo  $city->city ;?></option>
                         <?php endforeach ;?>
                     </select>
                 </div>
-                <a class="btn btn-lg" id="btn_reservation" href="#reservation">Find Now</a>
+                <a class="btn btn-lg Find_Now" id="btn_reservation" href="#reservation">Find Now</a>
             </form>
         </div>
     </header>
