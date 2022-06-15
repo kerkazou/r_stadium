@@ -2,7 +2,7 @@
 <!-- Modal Reservation -->
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <form action="" method="POST" class="modal-content">
+        <form method="POST" action="<?php echo URLROOT ;?>/Site/booken" class="modal-content">
             <div class="modal-header">
                 <div class="modal-title d-flex gap-2 align-items-center" id="exampleModalToggleLabel2">
                     <h2 class="name"></h2>,

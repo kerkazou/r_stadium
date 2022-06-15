@@ -6,6 +6,7 @@ class Site extends Controller{
         $this->sportModel = $this->model('Sport');
         $this->cityModel = $this->model('City');
         $this->stadiumModel = $this->model('Stadium');
+        $this->bookenModel = $this->model('Booken');
     }
     
     public function index() {
@@ -40,5 +41,37 @@ class Site extends Controller{
             echo json_encode($response);
         }
     } 
-    
+
+    public function booken() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); 
+            $data = [
+                'stadium_id' => $_POST['stadium_id'],
+                'date' => $_POST['date'],
+                'time' => $_POST['time'],
+                'error' => ''
+            ];
+            if((!empty($data['stadium_id'])) && (!empty($data['date'])) && (!empty($data['time']))){
+                $booken = $this->bookenModel->booken($data);
+                if($booken){
+                    redirect('');
+                }else if($booken == false){
+                    redirect('');
+                }
+            }
+            else{
+                redirect('site#reservation?error');
+            }
+        }
+        else{
+            //init data
+            $data = [
+                'stadium_id' => '',
+                'date' => '',
+                'time' => '',
+                'error' => ''
+            ];
+            redirect('Logins');
+        }
+    }
 }
