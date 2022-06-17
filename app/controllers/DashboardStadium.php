@@ -17,7 +17,7 @@ class DashboardStadium extends Controller {
         'sports' => $sports,
         'citys' => $citys,
     ];
-    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2)){
+    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2) && !(time() - $_SESSION['time'] > 60)){
       $this->view('dashboardStadium/index' , $data);
     }else{
       redirect('');

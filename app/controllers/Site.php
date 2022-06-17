@@ -19,7 +19,7 @@ class Site extends Controller{
             'stadiums' => $stadiums,
             'error' => ''
         ];
-        if (isset($_SESSION['user_id']) && (time() - $_SESSION['time'] > 20)) {
+        if (isset($_SESSION['user_id']) && (time() - $_SESSION['time'] > 60)) {
             redirect('logins/logout');
         }
         $this->view('index' , $data);
