@@ -11,7 +11,7 @@ class DashboardBooken extends Controller {
     $data = [
         'Bookens' => $Bookens,
     ];
-    if(isset($_SESSION['user_id'])){
+    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2)){
       $this->view('dashboardBooken/index' , $data);
     }else{
       redirect('');

@@ -14,7 +14,7 @@ class DashboardAdmin extends Controller {
         'numberstadiums' => $numberstadiums,
         'numberbookens' => $numberbookens,
     ];
-    if(isset($_SESSION['user_id'])){
+    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2)){
       $this->view('dashboardsAdmin/index' , $data);
     }else{
       redirect('');
