@@ -17,7 +17,7 @@
                         <div class="w-100 mb-3">
                             <input class="d-none id" name="stadium_id" type="text">
                             <input type="date" name="date">
-                            <input type="text" name="time" id="date">
+                            <input class="d-none" type="text" name="time" id="date">
                         </div>
                         <div class="row d-flex justify-content-center align-items-center flex-wrap gap-4">
                             <div class="col-3 btn time">

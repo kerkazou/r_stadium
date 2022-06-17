@@ -106,6 +106,7 @@
             </script>
             <!-- Card Reservation -->
             <div id="cards_stadium" class="flex-wrap gap-4">
+                <?php if(count($data['stadiums'])==0){ echo'<h2 class="text-light fw-bold">Reselt, note found.</h2>'; } ?>
                 <?php foreach ($data['stadiums'] as $stadium) : ?>
                     <div class="card_stadium col-md-5 col-11 wow bounceInLeft" data-wow-delay="1s">
                         <div class="img_stadium"><img src="<?php echo URLROOT; ?>/assets/slider1.jpg" alt="Image"></div>

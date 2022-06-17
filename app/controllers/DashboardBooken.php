@@ -11,7 +11,11 @@ class DashboardBooken extends Controller {
     $data = [
         'Bookens' => $Bookens,
     ];
-    $this->view('dashboardBooken/index' , $data);
+    if(isset($_SESSION['user_id'])){
+      $this->view('dashboardBooken/index' , $data);
+    }else{
+      redirect('');
+    }
   }
 
 }

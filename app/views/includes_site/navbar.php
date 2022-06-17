@@ -22,9 +22,21 @@
                 <li class="nav-item"><a class="nav-link" href="'.URLROOT.'/Logins">Log in</a></li>
             '; ?>
             <?php if(isset($_SESSION['user_id'])) echo '
-                <li class="nav-item"><a class="nav-link" href="">'.$_SESSION['last_name'].' '.$_SESSION['first_name'].'</a></li>
+                <li class="nav-item"><a class="nav-link" href="'.testrole().'">'.$_SESSION['last_name'].' '.$_SESSION['first_name'].'</a></li>
                 <li class="nav-item"><a class="nav-link" href="'.URLROOT.'/Logins/logout">Logout</a></li>
-            '; ?>
+            '; 
+            function testrole(){
+                if($_SESSION['role'] == 1){
+                    return 'manage';
+                }
+                if($_SESSION['role'] == 2){
+                    return 'DashboardAdmin';
+                }
+                if($_SESSION['role'] == 3){
+                    return '';
+                }
+            }
+            ?>
         </ul>
     </div>
 </nav>

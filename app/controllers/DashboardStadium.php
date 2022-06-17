@@ -17,7 +17,11 @@ class DashboardStadium extends Controller {
         'sports' => $sports,
         'citys' => $citys,
     ];
-    $this->view('dashboardStadium/index' , $data);
+    if(isset($_SESSION['user_id'])){
+      $this->view('dashboardStadium/index' , $data);
+    }else{
+      redirect('');
+    }
   }
 
 

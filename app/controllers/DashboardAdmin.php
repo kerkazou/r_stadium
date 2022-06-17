@@ -14,7 +14,11 @@ class DashboardAdmin extends Controller {
         'numberstadiums' => $numberstadiums,
         'numberbookens' => $numberbookens,
     ];
-    $this->view('dashboardsAdmin/index' , $data);
+    if(isset($_SESSION['user_id'])){
+      $this->view('dashboardsAdmin/index' , $data);
+    }else{
+      redirect('');
+    }
   }
 
 }

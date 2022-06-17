@@ -84,7 +84,7 @@
                     <input type="password" name="conf_password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Confirm Password*" required data-parsley-minlength="3">
                     <div class="col-sm-10 col-11 d-flex flex-column">
                         <div>
-                            <label class="fs-5 me-2" for="administrator">Administrator </label>
+                            <label class="fs-5 me-2" for="administrator">Pitch Owner </label>
                             <input value="2" name="role" type="radio" id="administrator" required>
                         </div>
                         <div>

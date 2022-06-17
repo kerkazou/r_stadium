@@ -26,15 +26,17 @@
                     <tr>
                       <th class="col-4 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">User</th>
                       <th class="col-4 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Stadium</th>
-                      <th class="col-4 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">###</th>
+                      <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Date</th>
+                      <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Hour</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php foreach ($data['Bookens'] as $booken) : ?>
                         <tr class="item">
-                          <td class="col-4 name"><?php echo  $booken->first_name.' '.$booken->last_name ;?></td>
-                          <td class="col-4 city"><?php echo  $booken->name ;?></td>
-                          <td class="col-4 city"><?php echo "###" ;?></td>
+                          <td class="col-4"><?php echo  $booken->first_name.' '.$booken->last_name ;?></td>
+                          <td class="col-4"><?php echo  $booken->name ;?></td>
+                          <td class="col-2"><?php echo  $booken->date ;?></td>
+                          <td class="col-2"><?php echo  $booken->hour ;?></td>
                         </tr>
                         <?php endforeach ;?>
                   </tbody>

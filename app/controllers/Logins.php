@@ -77,10 +77,18 @@ class Logins extends Controller {
                 $login = $this->loginModel->signin($data);
                 if($login){
                     $this->createUserSession($login);
+                    if($_SESSION['role'] == 3){
+                        redirect('');
+                    }
+                    if($_SESSION['role'] == 2){
+                        redirect('DashboardAdmin');
+                    }
+                    if($_SESSION['role'] == 1){
+                        die('manage');
+                    }
                     if(isset($_POST['rememberme'])){
                         $this->createUsercoockie($data);
                     }
-                    redirect('');
                 }else if($login == false){
                     redirect('Logins#sign_in?error');
                 }
