@@ -8,7 +8,7 @@ class DashboardAdmin extends Controller {
   }
 
   public function index(){
-    $numberstadiums = $this->stadiumModel->numberStadiums();
+    $numberstadiums = $this->stadiumModel->numberStadiumUser();
     $numberbookens = $this->bookenModel->numberBookens();
     $data = [
         'numberstadiums' => $numberstadiums,

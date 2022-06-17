@@ -11,7 +11,7 @@ class DashboardStadium extends Controller {
   public function index(){
     $sports = $this->sportModel->getSports();
     $citys = $this->cityModel->getCitys();
-    $stadiums = $this->stadiumModel->getStadiums();
+    $stadiums = $this->stadiumModel->getStadiumUser();
     $data = [
         'stadiums' => $stadiums,
         'sports' => $sports,
@@ -30,6 +30,7 @@ class DashboardStadium extends Controller {
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); 
         $data = [
             'name' => trim($_POST['name']),
+            'user' => $_SESSION['user_id'],
             'sport' => trim($_POST['sport']),
             'city' => trim($_POST['city']),
             'location' => $_POST['location'],
@@ -72,6 +73,7 @@ class DashboardStadium extends Controller {
         $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING); 
         $data = [
             'id' => $_GET['id'],
+            'user' => $_SESSION['user_id'],
             'error' => ''
         ];
         $stadium = $this->stadiumModel->delet($data);

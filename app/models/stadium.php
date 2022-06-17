@@ -28,9 +28,24 @@ class Stadium {
         return $result;
     }
 
+    public function getStadiumUser(){
+        $this->db->query('SELECT  
+            stadium.id as stadium_id,
+            stadium.name as stadium_name,
+            city.city as stadium_city,
+            sport.sport as stadium_sport,
+            stadium.location as stadium_location,
+            stadium.description as stadium_description,
+            stadium.site_web as stadium_site_web
+            FROM `stadium` INNER JOIN sport ON stadium.sport=sport.id INNER JOIN city ON stadium.city=city.id WHERE `user`='.$_SESSION['user_id'].''); 
+        $result = $this->db->resultSet();
+        return $result;
+    }
+
     public function addStadium($data){
-        $this->db->query('INSERT INTO `stadium` (name, sport, city, location, site_web, description) VALUES (:name, :sport, :city, :location, :site_web, :description)');
+        $this->db->query('INSERT INTO `stadium` (name, user, sport, city, location, site_web, description) VALUES (:name, :user, :sport, :city, :location, :site_web, :description)');
         $this->db->bind(':name', $data['name']);
+        $this->db->bind(':user', $data['user']);
         $this->db->bind(':sport', $data['sport']);
         $this->db->bind(':city', $data['city']);
         $this->db->bind(':location', $data['location']);
@@ -45,8 +60,9 @@ class Stadium {
     }
 
     public function delet($data){
-        $this->db->query('DELETE FROM `stadium` WHERE id = :id');
+        $this->db->query('DELETE FROM `stadium` WHERE id = :id AND user=:user');
         $this->db->bind(':id', $data['id']);
+        $this->db->bind(':user', $data['user']);
     
         if($this->db->execute()){
             return true;
@@ -58,13 +74,10 @@ class Stadium {
     public function editStadium($data) {
         $sport = $this->getIdSport($data['sport']);
         $city = $this->getIdcity($data['city']);
-        // var_dump($city);
-        // echo $sport[0]->sport_id;
-
-        // exit();
-        $this->db->query('UPDATE `stadium` SET `name`=:name , `sport`=:sport , `city`=:city , `location`=:location , `site_web`=:site_web , `description`=:description WHERE `id`=:id');
+        $this->db->query('UPDATE `stadium` SET `name`=:name , `sport`=:sport , `city`=:city , `location`=:location , `site_web`=:site_web , `description`=:description WHERE `id`=:id AND `user`=:user');
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':name', $data['name']);
+        $this->db->bind(':user', $data['user']);
         $this->db->bind(':sport', $sport[0]->sport_id);
         $this->db->bind(':city', $city[0]->city_id);
         $this->db->bind(':location', $data['location']);
@@ -88,7 +101,6 @@ class Stadium {
     }
 
     public function getSelectedStadiums($data){
-        
         if($data['sport'] == 0 && $data['city']== 0){
            return $this->get('SELECT 
             stadium.id as stadium_id,
@@ -137,6 +149,12 @@ class Stadium {
 
     public function numberStadiums(){
         $this->getStadiums();
+        $result = $this->db->rowCount();
+        return $result;
+    }
+    
+    public function numberStadiumUser(){
+        $this->getStadiumUser();
         $result = $this->db->rowCount();
         return $result;
     }
