@@ -55,6 +55,9 @@ class Site extends Controller{
                 'error' => ''
             ];
             if((!empty($data['stadium_id'])) && (!empty($data['date'])) && (!empty($data['time']))){
+                if(!isset($_SESSION['user_id'])){
+                    redirect('Logins');
+                }
                 $booken = $this->bookenModel->booken($data);
                 if($booken){
                     redirect('');
@@ -63,7 +66,7 @@ class Site extends Controller{
                 }
             }
             else{
-                redirect('site#reservation?error');
+                redirect('#reservation?error');
             }
         }
         else{

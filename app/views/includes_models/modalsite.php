@@ -2,7 +2,7 @@
 <!-- Modal Reservation -->
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <form method="POST" action="<?php echo URLROOT ;?>/Site/booken" class="modal-content">
+        <form method="POST" action="<?php echo URLROOT ;?>/Site/booken" class="modal-content" data-parsley-validate>
             <div class="modal-header">
                 <div class="modal-title d-flex gap-2 align-items-center" id="exampleModalToggleLabel2">
                     <h2 class="name"></h2>,
@@ -16,8 +16,7 @@
                     <div class="row justify-content-center">
                         <div class="w-100 mb-3">
                             <input class="d-none id" name="stadium_id" type="text">
-                            <input type="date" name="date">
-                            <input class="d-none" type="text" name="time" id="date">
+                            <input type="date" name="date" required>
                         </div>
                         <div class="row d-flex justify-content-center align-items-center flex-wrap gap-4">
                             <div class="col-3 btn time">
@@ -69,6 +68,7 @@
                                 <input class="input_time" type="radio" id="8pm" value="8:00PM">
                             </div>
                         </div>
+                        <div><input class="d-none" type="text" name="time" id="date" required></div>
                     </div>
                 </div>
 
