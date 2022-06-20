@@ -305,7 +305,7 @@
     <footer class="text-light py-5">
         <div class="d-lg-flex justify-content-around align-items-center gap-3">
             <div class="col-lg-5 d-flex flex-column px-4">
-                <a class="nav-link h1 text-light" href="#page-top">R-Stadium</a>
+                <p class="nav-link h1 text-light">R-Stadium</p>
                 <p class="ps-3">
                     <b> R-Stadium</b> system vous propose, un ensemble de logiciels de gestion et de contrôle d'accès, un ensemble homogène couvrant l’intégralité de vos besoins pour gérer, contrôler et accroître votre activité.
                 </p>
