@@ -37,6 +37,14 @@
           </a>
             <ul class="navbar-nav collapse" id="collapseExample" style="width: 80%; margin-left: 10%;">
               <li class="nav-item">
+                <a class="nav-link <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/Contacts') echo'active'; ?>" href="<?php echo URLROOT ;?>/Contacts">
+                  <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-table text-secondary text-sm opacity-10"></i>
+                  </div>
+                  <span class="nav-link-text ms-1">Contacts</span>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/Stadiums') echo'active'; ?>" href="<?php echo URLROOT ;?>/Stadiums">
                   <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="bi bi-table text-secondary text-sm opacity-10"></i>
