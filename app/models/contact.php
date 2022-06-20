@@ -8,6 +8,12 @@ class Contact {
         $this->db = new Database;
     }
 
+    public function getContacts(){
+        $this->db->query("SELECT * FROM contact");
+        $result = $this->db->resultSet();
+        return $result;
+    }
+
     // Send Message
     public function sendMessage($data){
         $this->db->query('INSERT INTO contact (username, email, phone, message) VALUES (:username, :email, :phone, :message)');
@@ -21,6 +27,12 @@ class Contact {
         }else{
             return false;
         }
+    }
+
+    public function numberContacts(){
+        $this->getContacts();
+        $result = $this->db->rowCount();
+        return $result;
     }
 
 }

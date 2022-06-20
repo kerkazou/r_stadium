@@ -56,4 +56,10 @@ class Login {
         }
     }
 
+    public function numberUser(){
+        $this->getUsers();
+        $result = $this->db->rowCount();
+        return $result;
+    }
+
 }
