@@ -43,7 +43,7 @@
                           <td class="col-2"><?php echo  $user->phone ;?></td>
                           <td class="col-2"><?php echo  $user->role ;?></td>
                           <td class="col-1">
-                            <input type="checkbox" class="user-<?php echo  $user->id ;?>" <?php if($user->status) echo "checked" ;?>  onchange="test(<?php echo $user->id ;?>);">
+                            <input type="checkbox" class="user-<?php echo  $user->id ;?>" <?php if($user->status) echo "checked" ;?>  onchange="statusUser(<?php echo $user->id ;?>);">
                           </td>
                         </tr>
                         <?php endforeach ;?>
@@ -62,18 +62,7 @@
 
 
   <script>
-  function test(id){
-    // let user_id = document.querySelectorAll(".user-"+id);
-    // console.log(status);
-    
-    // let status = 1 or 0;
-    /* if(selecor )
-    {
-      active
-    }else{
-      no active
-    }
-    $(".user-"+id) */
+  function statusUser(id){
     let user_id = id;
     let status = 0;
     if($('.user-'+id).is(":checked")){
@@ -81,7 +70,6 @@
     }else{
       status = 0;
     }
-    // console.log(status);
       $.ajax({
         url:'<?=URLROOT?>/Logins/statusUser',
         method:'POST',
