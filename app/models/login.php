@@ -61,5 +61,23 @@ class Login {
         $result = $this->db->rowCount();
         return $result;
     }
+    
+    public function statusUser($data){
+        if($data['status'] == 1){
+            $data['status'] = 1;
+        }else{
+            $data['status'] = 0;
+        }
+        $this->db->query('UPDATE `user` SET `status`=:status WHERE `id`=:id');
+        $this->db->bind(':id', $data['user_id']);
+        $this->db->bind(':status', $data['status']);
+
+        $this->db->execute();
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }

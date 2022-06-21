@@ -84,7 +84,7 @@ class Logins extends Controller {
                         redirect('DashboardAdmin');
                     }
                     if($_SESSION['role'] == 1){
-                        die('manage');
+                        redirect('DashboardManager');
                     }
                     if(isset($_POST['rememberme'])){
                         $this->createUsercoockie($data);
@@ -104,6 +104,18 @@ class Logins extends Controller {
                 'error' => ''
             ];
             redirect('Logins');      
+        }
+    }
+
+
+    public function statusUser() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $data = [
+                'user_id' => $_POST['user_id'],
+                'status' => $_POST['status']
+            ];
+            $statusUser = $this->loginModel->statusUser($data);
         }
     }
 

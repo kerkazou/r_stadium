@@ -24,8 +24,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape fs-5 bg-gradient-primary shadow-primary text-center rounded-circle">
-                    <i class="bi bi-person opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape fs-5 rounded-circle bg-success">
+                    <img class="w-100" src="<?php echo URLROOT; ?>/assets/user.png">
                   </div>
                 </div>
               </div>
@@ -44,8 +44,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape fs-5 bg-gradient-primary shadow-primary text-center rounded-circle">
-                    <i class="bi bi-person opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape fs-5 rounded-circle bg-success">
+                    <img class="w-100" src="<?php echo URLROOT; ?>/assets/stadium.png">
                   </div>
                 </div>
               </div>
@@ -64,8 +64,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape fs-5 bg-gradient-primary shadow-primary text-center rounded-circle">
-                    <i class="ni ni-money-coins opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape fs-5 rounded-circle bg-success">
+                    <img class="w-100" src="<?php echo URLROOT; ?>/assets/booken.png">
                   </div>
                 </div>
               </div>
@@ -84,8 +84,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape fs-5 bg-gradient-primary shadow-primary text-center rounded-circle">
-                    <i class="ni ni-money-coins opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape fs-5 rounded-circle bg-success">
+                    <img class="w-100" src="<?php echo URLROOT; ?>/assets/contact.png">
                   </div>
                 </div>
               </div>
