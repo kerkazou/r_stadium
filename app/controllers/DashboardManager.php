@@ -7,6 +7,7 @@ class DashboardManager extends Controller {
     $this->stadiumModel = $this->model('Stadium');
     $this->bookenModel = $this->model('Booken');
     $this->contactModel = $this->model('Contact');
+    $this->cityModel = $this->model('City');
   }
 
   public function index(){
@@ -14,11 +15,13 @@ class DashboardManager extends Controller {
     $numberstadium = $this->stadiumModel->numberStadiums();
     $numberbooken = $this->bookenModel->numberBookens();
     $numbercontact = $this->contactModel->numberContacts();
+    $citys = $this->cityModel->getCitys();
     $data = [
       'numberuser' => $numberuser,
       'numberstadium' => $numberstadium,
       'numberbooken' => $numberbooken,
-      'numbercontact' => $numbercontact
+      'numbercontact' => $numbercontact,
+      'citys' => $citys
   ];
     $this->view('dashboardsManager/index' , $data);
   }

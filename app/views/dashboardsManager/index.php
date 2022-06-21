@@ -10,9 +10,9 @@
     <?php require APPROOT . '/views/includes_dashboards/navbar2.php'; ?>
 
     <!-- Statistiques -->
-    <div class="container-fluid py-5 my-5">
+    <div class="container-fluid pt-5 pb-3">
+      
       <div class="row">
-
         <div class="col-sm-3 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body px-3">
@@ -93,69 +93,34 @@
           </div>
         </div>
 
-      <!-- <div class="row mt-5">
-        <div class="col-lg-5 mb-5">
-          <div class="card">
-            <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">genre</h6>
-            </div>
-            <div class="card-body p-3">
-              <ul class="list-group">
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="bi bi-gender-male opacity-10" style="color: #1181F0;"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-sm" style="color: #1181F0;">Masculin</h6>
-                      <span class="text-xs">0 étudiant, <span class="font-weight-bold">0 professeurs</span></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="bi bi-gender-female opacity-10" style="color: #E95098;"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-sm" style="color: #E95098;">Féminin</h6>
-                      <span class="text-xs">0 étudiant, <span class="font-weight-bold">0 professeurs</span></span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div class="col-lg-7">
-          <div class="card pb-3">
-            <div class="card-header pb-4 p-3">
-              <h6 class="mb-0">classe</h6>
-            </div>
-            <div class="col-11 mx-auto border-start border-bottom border-3 position-relative gap-3" style="height: 200px;">
-              <div class="col-2 position-absolute top-0 end-0">
-                <div class="d-flex align-items-center gap-2">
-                  <div class="bg-success" style="width: 20px; height: 20px;"></div>
-                  <span>Classe 1</span>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                  <div class="bg-info" style="width: 20px; height: 20px;"></div>
-                  <span>Classe 2</span>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                  <div class="bg-danger" style="width: 20px; height: 20px;"></div>
-                  <span>Classe 3</span>
-                </div>
+        
+        <div class="row mt-4">
+          <div class="col-lg-5">
+            <div class="card">
+              <div class="card-header pb-0 py-3 px-4">
+                <div class="d-flex mb-0"><h5 class="font-weight-bolder">162</h5><h5>, City</h5></div>
               </div>
-              <div class="position-absolute bottom-0 w-100 mx-3 d-flex align-items-end gap-3 text-center text-dark">
-                <div class="rounded-top bg-success text-uppercase font-weight-bolder" style="width: 50px; height: <?php //echo $data['cless1etudiant'] ?>0px;"><?php //echo $data['cless1etudiant'] ?></div>
-                <div class="rounded-top bg-info text-uppercase font-weight-bolder" style="width: 50px; height: <?php //echo $data['cless2etudiant'] ?>0px;"><?php //echo $data['cless2etudiant'] ?></div>
-                <div class="rounded-top bg-danger text-uppercase font-weight-bolder" style="width: 50px; height: <?php //echo $data['cless3etudiant'] ?>0px;"><?php //echo $data['cless3etudiant'] ?></div>
+              <div style="max-height: 290px; overflow-y: auto;">
+                <table class="table table-striped table-hover mb-0 text-center">
+                    <thead>
+                      <tr>
+                        <th class="col-3 text-uppercase text-secondary text-xs font-weight-bolder opacity-7"></th>
+                        <th class="col-9 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">City</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php foreach ($data['citys'] as $city) : ?>
+                          <tr class="item">
+                            <td class="col-3"><?php echo  $city->id ;?></td>
+                            <td class="col-9"><?php echo  $city->city ;?></td>
+                          </tr>
+                          <?php endforeach ;?>
+                    </tbody>
+                  </table>
+                </div>
             </div>
           </div>
-        </div> -->
-
+        </div>
       </div>
     </div>
   </main>
