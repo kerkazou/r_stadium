@@ -17,7 +17,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-              <h1 class="text-uppercase fs-6">Contact</h1>
+              <div class="text-uppercase h1 fs-6">Contact</div>
             </div>
             <div class="card-body px-3 pt-0 pb-2">
               <div class="table-responsive p-0" style="min-height: 150px; max-height: 480px; overflow-x: hidden;">

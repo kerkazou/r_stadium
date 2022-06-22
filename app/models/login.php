@@ -14,6 +14,12 @@ class Login {
         return $result;
     }
 
+    public function searchUser($data){
+        $this->db->query('SELECT * FROM `user` WHERE user.first_name LIKE \'%'.$data['search_username'].'%\'');
+        $result = $this->db->resultSet();
+        return $result;
+    }
+
     public function signup($data){
         $this->db->query('INSERT INTO `user` (first_name, last_name, email, phone, password, role) VALUES (:first_name, :last_name, :email, :phone, :password, :role)');
         $this->db->bind(':first_name', $data['first_name']);

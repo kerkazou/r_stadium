@@ -18,6 +18,49 @@
           <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
               <h1 class="text-uppercase fs-6">User</h1>
+              <div class="input-group me-3" style="width: 25% !important;">
+                  <input type="text" id="search_username" class="form-control" placeholder="Username"  style="height: 45px;">
+                  <span class="input-group-text"><i class="bi bi-search"></i></span>
+              </div>
+              <script>
+                let search_username = document.getElementById('search_username');
+                search_username.addEventListener('keyup', function(){
+                var valueSearch = document.getElementById('search_username').value;
+                   $.ajax({
+                    url:'<?=URLROOT?>/Users/searchUser',
+                    method:'POST',
+                    data:{
+                      search_username:valueSearch
+                    },
+                    success:function(data){
+                        let users = JSON.parse(data);
+                        document.getElementById('resultusers').innerHTML = '';
+                        let usersCon=document.getElementById('resultusers');
+                        if(users.length == 0){
+                            document.getElementById('resultusers').innerHTML = '';
+                        }else{
+                          users.forEach((u)=>{
+                              let el=document.createElement('tr');
+                              el.classList.add('item');
+                              let checked=u.status?"checked":'';
+                              el.innerHTML=`
+                                <td class="col-1">${u.id}</td>
+                                <td class="col-2">${u.first_name}</td>
+                                <td class="col-2">${u.last_name}  </td>
+                                <td class="col-2">${u.email}</td>
+                                <td class="col-2">${u.phone }</td>
+                                <td class="col-2">${u.role }</td>
+                                <td class="col-1">
+                                  <input type="checkbox" class="user-${u.id}" ${checked}  onchange="statusUser(${u.id});">
+                                </td>`;
+                                usersCon.appendChild(el);
+                          });
+
+                        }
+                    }
+                  })
+                });
+              </script>
             </div>
             <div class="card-body px-3 pt-0 pb-2">
               <div class="table-responsive p-0" style="min-height: 150px; max-height: 480px; overflow-x: hidden;">
@@ -33,7 +76,7 @@
                       <th class="col-1 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Status</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="resultusers">
                     <?php foreach ($data['users'] as $user) : ?>
                         <tr class="item">
                           <td class="col-1"><?php echo  $user->id ;?></td>

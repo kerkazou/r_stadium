@@ -145,6 +145,4 @@ class Logins extends Controller {
         setcookie('email' , $data['email'] , time() + 60*60 , null , null , false , true);
         setcookie('password' , $data['password'] , time() + 60*60 , null , null , false , true);
     }
-  
-
 }

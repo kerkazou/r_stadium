@@ -80,8 +80,8 @@
                     <input type="text" name="last_name" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Last Name*" required data-parsley-minlength="3">
                     <input type="text" name="email" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Email*" required data-parsley-type="email">
                     <input type="text" name="phone" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Phone Number">
-                    <input type="password" name="password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3">
-                    <input type="password" name="conf_password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Confirm Password*" required data-parsley-minlength="3">
+                    <input type="password" name="password" id="password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3">
+                    <input type="password" name="conf_password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Confirm Password*" required data-parsley-equalto="#password">
                     <div class="col-sm-10 col-11 d-flex flex-column">
                         <div>
                             <label class="fs-5 me-2" for="administrator">Pitch Owner </label>
