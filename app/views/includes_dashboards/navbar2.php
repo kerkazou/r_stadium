@@ -8,7 +8,7 @@
                 <?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardManager') echo'Dashboard'; else echo 'Table'; ?>
             </li>
         </ol>
-        <h6 class="font-weight-bolder text-white mb-0"><?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardManager') echo'Dashboard'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/Stadiums') echo'Stadium'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/Bookens') echo'Booken'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/users') echo'User';?></h6>
+        <h6 class="font-weight-bolder text-white mb-0"><?php if($_SERVER['REQUEST_URI']=='/R-Stadium/DashboardManager') echo'Dashboard'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/Stadiums') echo'Stadium'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/Bookens') echo'Booken'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/Users') echo'User'; elseif($_SERVER['REQUEST_URI']=='/R-Stadium/Contacts') echo'Contact';?></h6>
     </nav>
     <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
         <ul class="navbar-nav justify-content-end">

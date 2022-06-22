@@ -9,14 +9,14 @@ class Contact {
     }
 
     public function getContacts(){
-        $this->db->query("SELECT * FROM contact");
+        $this->db->query("SELECT * FROM `contact` ORDER BY `contact`.`id` DESC");
         $result = $this->db->resultSet();
         return $result;
     }
 
     // Send Message
     public function sendMessage($data){
-        $this->db->query('INSERT INTO contact (username, email, phone, message) VALUES (:username, :email, :phone, :message)');
+        $this->db->query('INSERT INTO `contact` (username, email, phone, message) VALUES (:username, :email, :phone, :message)');
         $this->db->bind(':username', $data['username']);
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':phone', $data['phone']);
