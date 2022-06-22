@@ -8,6 +8,7 @@ class DashboardManager extends Controller {
     $this->bookenModel = $this->model('Booken');
     $this->contactModel = $this->model('Contact');
     $this->cityModel = $this->model('City');
+    $this->sportModel = $this->model('Sport');
   }
 
   public function index(){
@@ -16,12 +17,18 @@ class DashboardManager extends Controller {
     $numberbooken = $this->bookenModel->numberBookens();
     $numbercontact = $this->contactModel->numberContacts();
     $citys = $this->cityModel->getCitys();
+    $numbercity = $this->cityModel->numberCitys();
+    $sports = $this->sportModel->getSports();
+    $numbersport = $this->sportModel->numberSports();
     $data = [
       'numberuser' => $numberuser,
       'numberstadium' => $numberstadium,
       'numberbooken' => $numberbooken,
       'numbercontact' => $numbercontact,
-      'citys' => $citys
+      'citys' => $citys,
+      'numbercity' => $numbercity,
+      'sports' => $sports,
+      'numbersport' => $numbersport
   ];
     $this->view('dashboardsManager/index' , $data);
   }

@@ -14,4 +14,10 @@ class City {
         return $result;
     }
 
+    public function numberCitys(){
+        $this->getCitys();
+        $result = $this->db->rowCount();
+        return $result;
+    }
+
 }

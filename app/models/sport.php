@@ -14,4 +14,10 @@ class Sport {
         return $result;
     }
 
+    public function numberSports(){
+        $this->getSports();
+        $result = $this->db->rowCount();
+        return $result;
+    }
+
 }

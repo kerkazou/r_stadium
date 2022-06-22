@@ -95,10 +95,10 @@
 
         
         <div class="row mt-4">
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <div class="card">
               <div class="card-header pb-0 py-3 px-4">
-                <div class="d-flex mb-0"><h5 class="font-weight-bolder">162</h5><h5>, City</h5></div>
+                <div class="d-flex mb-0"><h5 class="font-weight-bolder"><?php echo  $data['numbercity'] ;?></h5><h5>, City</h5></div>
               </div>
               <div style="max-height: 290px; overflow-y: auto;">
                 <table class="table table-striped table-hover mb-0 text-center">
@@ -113,6 +113,32 @@
                           <tr class="item">
                             <td class="col-3"><?php echo  $city->id ;?></td>
                             <td class="col-9"><?php echo  $city->city ;?></td>
+                          </tr>
+                          <?php endforeach ;?>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header pb-0 py-3 px-4">
+                <div class="d-flex mb-0"><h5 class="font-weight-bolder"><?php echo  $data['numbersport'] ;?></h5><h5>, Sport</h5></div>
+              </div>
+              <div style="max-height: 290px; overflow-y: auto;">
+                <table class="table table-striped table-hover mb-0 text-center">
+                    <thead>
+                      <tr>
+                        <th class="col-3 text-uppercase text-secondary text-xs font-weight-bolder opacity-7"></th>
+                        <th class="col-9 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Sport</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php foreach ($data['sports'] as $sport) : ?>
+                          <tr class="item">
+                            <td class="col-3"><?php echo  $sport->id ;?></td>
+                            <td class="col-9"><?php echo  $sport->sport ;?></td>
                           </tr>
                           <?php endforeach ;?>
                     </tbody>
