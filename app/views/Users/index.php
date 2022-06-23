@@ -44,7 +44,6 @@
                               el.classList.add('item');
                               let checked=u.status?"checked":'';
                               el.innerHTML=`
-                                <td class="col-1">${u.id}</td>
                                 <td class="col-2">${u.first_name}</td>
                                 <td class="col-2">${u.last_name}  </td>
                                 <td class="col-2">${u.email}</td>
@@ -118,7 +117,7 @@
           user_id:user_id,
           status:status
         },
-        success:function(data){ console.log(data) }
+        success:function(data){}
       })
   }
   </script>

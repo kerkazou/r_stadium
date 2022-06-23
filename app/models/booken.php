@@ -13,9 +13,24 @@ class Booken {
         $result = $this->db->resultSet();
         return $result;
     }
-    
+
     public function numberBookens(){
         $this->getBookens();
+        $result = $this->db->rowCount();
+        return $result;
+    }
+
+    public function getBookensUser(){
+        $this->db->query('SELECT 
+            booken.*, stadium.*, user.*
+            FROM `booken`
+            INNER JOIN stadium ON booken.stadium = stadium.id INNER JOIN user ON booken.user=user.id WHERE stadium.user='.$_SESSION['user_id'].'');
+        $result = $this->db->resultSet();
+        return $result;
+    }
+    
+    public function numberBookensUser(){
+        $this->getBookensUser();
         $result = $this->db->rowCount();
         return $result;
     }
