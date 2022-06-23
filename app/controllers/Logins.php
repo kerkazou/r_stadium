@@ -77,14 +77,17 @@ class Logins extends Controller {
                 $login = $this->loginModel->signin($data);
                 if($login){
                     $this->createUserSession($login);
-                    if($_SESSION['role'] == 3){
-                        redirect('');
-                    }
-                    if($_SESSION['role'] == 2){
-                        redirect('DashboardAdmin');
-                    }
                     if($_SESSION['role'] == 1){
                         redirect('DashboardManager');
+                    }
+                    elseif(($_SESSION['role'] == 2) && ($_SESSION['status'] == 1)){
+                        redirect('DashboardAdmin');
+                    }
+                    elseif(($_SESSION['role'] == 3) && ($_SESSION['status'] == 1)){
+                        redirect('');
+                    }
+                    else{
+                        redirect('logins/logout');
                     }
                     if(isset($_POST['rememberme'])){
                         $this->createUsercoockie($data);
@@ -126,6 +129,7 @@ class Logins extends Controller {
         $_SESSION['last_name'] = $user->last_name;
         $_SESSION['email'] = $user->email;
         $_SESSION['role'] = $user->role;
+        $_SESSION['status'] = $user->status;
         $_SESSION['time'] = time();
     }
 
@@ -137,7 +141,7 @@ class Logins extends Controller {
         unset($_SESSION['role']);
         unset($_SESSION['time']);
         session_destroy();
-        redirect('');
+        redirect('Logins#sign_in');
     }
 
 

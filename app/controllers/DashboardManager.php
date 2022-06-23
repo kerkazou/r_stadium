@@ -12,7 +12,7 @@ class DashboardManager extends Controller {
   }
 
   public function index(){
-    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 1) && (time() - $_SESSION['time'] > 60)) {
+    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 1) && !(time() - $_SESSION['time'] > 60)) {
       $numberuser = $this->userModel->numberUser();
       $numberstadium = $this->stadiumModel->numberStadiums();
       $numberbooken = $this->bookenModel->numberBookens();
