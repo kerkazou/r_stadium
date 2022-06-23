@@ -7,7 +7,7 @@ class DashboardBooken extends Controller {
   }
 
   public function index(){
-    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2) && !(time() - $_SESSION['time'] > 60)){
+    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2) && !(time() - $_SESSION['time'] > 60*60)){
       $Bookens = $this->bookenModel->getBookens();
       $data = [
           'Bookens' => $Bookens,

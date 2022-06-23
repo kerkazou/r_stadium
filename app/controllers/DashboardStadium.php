@@ -9,7 +9,7 @@ class DashboardStadium extends Controller {
   }
 
   public function index(){
-    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2) && !(time() - $_SESSION['time'] > 60)){
+    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2) && !(time() - $_SESSION['time'] > 60*60)){
       $sports = $this->sportModel->getSports();
       $citys = $this->cityModel->getCitys();
       $stadiums = $this->stadiumModel->getStadiumUser();
@@ -87,7 +87,7 @@ class DashboardStadium extends Controller {
 
   public function editStadium() {
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); 
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
       $data = [
           'id' => $_POST['id'],
           'name' => trim($_POST['name']),
@@ -99,11 +99,11 @@ class DashboardStadium extends Controller {
           'error' => ''
       ];
       if((!empty($data['name'])) && (!empty($data['sport'])) && (!empty($data['city']))){
-        $addStadium = $this->stadiumModel->editStadium($data);
-        if($addStadium){
+        $editStadium = $this->stadiumModel->editStadium($data);
+        if($editStadium){
           $data['error'] = 'Stadium has been added successfully.';
           redirect('dashboardStadium');
-        }else if($addStadium == false){
+        }else if($editStadium == false){
           $data['error'] = 'Error, Please Repeat again.';
           redirect('dashboardStadium');
         }

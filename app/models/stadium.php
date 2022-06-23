@@ -77,7 +77,7 @@ class Stadium {
         $this->db->query('UPDATE `stadium` SET `name`=:name , `sport`=:sport , `city`=:city , `location`=:location , `site_web`=:site_web , `description`=:description WHERE `id`=:id AND `user`=:user');
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':name', $data['name']);
-        $this->db->bind(':user', $data['user']);
+        $this->db->bind(':user', $_SESSION['user_id']);
         $this->db->bind(':sport', $sport[0]->sport_id);
         $this->db->bind(':city', $city[0]->city_id);
         $this->db->bind(':location', $data['location']);

@@ -8,27 +8,9 @@
         
         <!-- Home -->
         <div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center gap-3 text-light animate__animated animate__backInDown" id="home">
-            <h1 class="text-uppercase">Welcome To R-Stadiom</h1>
+            <h1 class="text-uppercase">Welcome To R-Stadium</h1>
             <h3 class="text-center">Easily find a stadium or a sports club in Morocco</h3>
-            <form action="" class="w-100 d-flex flex-wrap justify-content-center align-items-center gap-3">
-                <div class="search_select_box">
-                    <select class="selectpicker" data-live-search="true" id="sport_header">
-                        <option value="all">All sports</option>
-                        <?php foreach ($data['sports'] as $sport) : ?>
-                            <option value="<?php echo  $sport->id ;?>"><?php echo  $sport->sport ;?></option>
-                        <?php endforeach ;?>
-                    </select>
-                </div>
-                <div class="search_select_box">
-                    <select class="selectpicker" data-live-search="true" id="city_header">
-                        <option>All the cities</option>
-                        <?php foreach ($data['citys'] as $city) : ?>
-                            <option value="<?php echo  $city->id ;?>"><?php echo  $city->city ;?></option>
-                        <?php endforeach ;?>
-                    </select>
-                </div>
-                <a class="btn btn-lg Find_Now" id="btn_reservation" href="#reservation">Find Now</a>
-            </form>
+            <a class="btn btn-lg Find_Now" id="btn_reservation" href="#reservation">Look For A Stadium</a>
         </div>
     </header>
 
@@ -319,7 +301,7 @@
                     <li class="nav-item"><a class="nav-link text-light" href="#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link text-light" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link text-light" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#connecter">Se Connecter</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#connecter">Log In</a></li>
                 </ul>
             </div>
             <div class="d-flex flex-column gap-3 text-center">

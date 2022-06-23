@@ -67,25 +67,23 @@
                 <table class="table align-items-center justify-content-center mb-0 text-center">
                   <thead>
                     <tr>
-                      <th class="col-1 text-uppercase text-secondary text-xs font-weight-bolder opacity-7"></th>
                       <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">First Name</th>
                       <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Last Name</th>
                       <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Email</th>
                       <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Phone</th>
                       <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Role</th>
-                      <th class="col-1 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Status</th>
+                      <th class="col-2 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Status</th>
                     </tr>
                   </thead>
                   <tbody id="resultusers">
                     <?php foreach ($data['users'] as $user) : ?>
                         <tr class="item">
-                          <td class="col-1"><?php echo  $user->id ;?></td>
                           <td class="col-2"><?php echo  $user->first_name ;?></td>
                           <td class="col-2"><?php echo  $user->last_name ;?></td>
                           <td class="col-2"><?php echo  $user->email ;?></td>
                           <td class="col-2"><?php echo  $user->phone ;?></td>
-                          <td class="col-2"><?php echo  $user->role ;?></td>
-                          <td class="col-1">
+                          <td class="col-2"><?php if($user->role==1) echo 'Manager'; elseif($user->role==2) echo 'Pitch Owner'; else echo 'Player'?></td>
+                          <td class="col-2">
                             <input type="checkbox" class="user-<?php echo  $user->id ;?>" <?php if($user->status) echo "checked" ;?>  onchange="statusUser(<?php echo $user->id ;?>);">
                           </td>
                         </tr>
