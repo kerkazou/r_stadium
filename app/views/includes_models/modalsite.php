@@ -4,9 +4,9 @@
     <div class="modal-dialog modal-dialog-centered">
         <form method="POST" action="<?php echo URLROOT ;?>/Site/booken" class="modal-content" data-parsley-validate>
             <div class="modal-header">
-                <div class="modal-title d-flex gap-2 align-items-center" id="exampleModalToggleLabel2">
-                    <h2 class="name"></h2>,
-                    <p class="city"></p>,
+                <div class="modal-title d-flex gap-2 h3 align-items-center" id="exampleModalToggleLabel2">
+                    <p class="name"></p><p>,</p>
+                    <p class="city"></p><p>,</p>
                     <p class="sport"></p>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -15,8 +15,8 @@
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div class="w-100 mb-3">
-                            <input class="d-none id" name="stadium_id" type="text">
-                            <input type="date" name="date" required>
+                            <input class="d-none id" name="stadium_id"  type="text">
+                            <input type="date" name="date" min="<?= date("Y-m-d") ?>" required>
                         </div>
                         <div class="row d-flex justify-content-center align-items-center flex-wrap gap-4">
                             <div class="col-3 btn time">
