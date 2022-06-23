@@ -9,15 +9,15 @@ class DashboardStadium extends Controller {
   }
 
   public function index(){
-    $sports = $this->sportModel->getSports();
-    $citys = $this->cityModel->getCitys();
-    $stadiums = $this->stadiumModel->getStadiumUser();
-    $data = [
-        'stadiums' => $stadiums,
-        'sports' => $sports,
-        'citys' => $citys,
-    ];
     if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 2) && !(time() - $_SESSION['time'] > 60)){
+      $sports = $this->sportModel->getSports();
+      $citys = $this->cityModel->getCitys();
+      $stadiums = $this->stadiumModel->getStadiumUser();
+      $data = [
+          'stadiums' => $stadiums,
+          'sports' => $sports,
+          'citys' => $citys,
+      ];
       $this->view('dashboardStadium/index' , $data);
     }else{
       redirect('');

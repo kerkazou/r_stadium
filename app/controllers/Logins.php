@@ -28,7 +28,7 @@ class Logins extends Controller {
                 'role' => trim($_POST['role']),
                 'error' => ''
             ];
-            if((!empty($data['first_name'])) && (!empty($data['last_name'])) && (!empty($data['email'])) && (!empty($data['phone'])) && (!empty($data['password'])) && (!empty($data['conf_password'])) && (!empty($data['role']))){
+            if((!empty($data['first_name'])) && (!empty($data['last_name'])) && (!empty($data['email'])) && (!empty($data['password'])) && (!empty($data['conf_password'])) && (!empty($data['role']))){
                 if($data['password'] == $data['conf_password']){
                     if(!($this->loginModel->userExists($data))){
                         $login = $this->loginModel->signup($data);

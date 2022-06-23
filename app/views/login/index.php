@@ -61,7 +61,7 @@
                     </div>
                     <input type="submit" class="btn btn-lg btn-primary btn-lg col-md-5 col-8 mb-0" value="Register">
                 </form>
-                <p class="text-sm mt-3 mb-0">Don't have an account? <a href="<?php echo URLROOT ;?>/logins#sign_up" class="text-dark font-weight-bolder">Sign in</a></p>
+                <p class="text-sm mt-3 mb-0">Don't have an account? <a href="<?php echo URLROOT ;?>/logins#sign_up" class="text-dark font-weight-bolder">Sign Up</a></p>
             </div>
         </div>
 
@@ -76,12 +76,12 @@
                 <p class="text-sm font-weight-bold text-secondary">or</p>
                 <div id="error_sign_up"></div>
                 <form class="d-flex flex-wrap justify-content-center align-items-center" method="POST" action="<?php echo URLROOT ;?>/logins/signup" data-parsley-validate>
-                    <input type="text" name="first_name" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="First Name*" required data-parsley-minlength="3">
-                    <input type="text" name="last_name" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Last Name*" required data-parsley-minlength="3">
-                    <input type="text" name="email" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Email*" required data-parsley-type="email">
+                    <input type="text" name="first_name" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="First Name*" required data-parsley-minlength="3" data-parsley-trigger="change">
+                    <input type="text" name="last_name" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Last Name*" required data-parsley-minlength="3" data-parsley-trigger="change">
+                    <input type="text" name="email" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Email*" required data-parsley-type="email" data-parsley-trigger="change">
                     <input type="text" name="phone" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Phone Number">
-                    <input type="password" name="password" id="password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3">
-                    <input type="password" name="conf_password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Confirm Password*" required data-parsley-equalto="#password">
+                    <input type="password" name="password" id="password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Password*" required data-parsley-minlength="3" data-parsley-trigger="change">
+                    <input type="password" name="conf_password" class="form-control form-control-lg col-sm-10 col-11 my-2" placeholder="Confirm Password*" required data-parsley-equalto="#password" data-parsley-trigger="change">
                     <div class="col-sm-10 col-11 d-flex flex-column">
                         <div>
                             <label class="fs-5 me-2" for="administrator">Pitch Owner </label>
@@ -94,7 +94,7 @@
                     </div>
                     <input type="submit" class="btn btn-lg btn-primary btn-lg col-md-5 col-8 mb-0" value="Register">
                 </form>
-                <p class="text-sm mt-3 mb-0">Already have an account? <a href="<?php echo URLROOT ;?>/logins#sign_in" class="text-dark font-weight-bolder">Sign in</a></p>
+                <p class="text-sm mt-3 mb-0">Already have an account? <a href="<?php echo URLROOT ;?>/logins#sign_in" class="text-dark font-weight-bolder">Sign In</a></p>
             </div>
         </div>
     </section>

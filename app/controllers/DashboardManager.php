@@ -12,25 +12,29 @@ class DashboardManager extends Controller {
   }
 
   public function index(){
-    $numberuser = $this->userModel->numberUser();
-    $numberstadium = $this->stadiumModel->numberStadiums();
-    $numberbooken = $this->bookenModel->numberBookens();
-    $numbercontact = $this->contactModel->numberContacts();
-    $citys = $this->cityModel->getCitys();
-    $numbercity = $this->cityModel->numberCitys();
-    $sports = $this->sportModel->getSports();
-    $numbersport = $this->sportModel->numberSports();
-    $data = [
-      'numberuser' => $numberuser,
-      'numberstadium' => $numberstadium,
-      'numberbooken' => $numberbooken,
-      'numbercontact' => $numbercontact,
-      'citys' => $citys,
-      'numbercity' => $numbercity,
-      'sports' => $sports,
-      'numbersport' => $numbersport
-  ];
-    $this->view('dashboardsManager/index' , $data);
+    if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 1) && (time() - $_SESSION['time'] > 60)) {
+      $numberuser = $this->userModel->numberUser();
+      $numberstadium = $this->stadiumModel->numberStadiums();
+      $numberbooken = $this->bookenModel->numberBookens();
+      $numbercontact = $this->contactModel->numberContacts();
+      $citys = $this->cityModel->getCitys();
+      $numbercity = $this->cityModel->numberCitys();
+      $sports = $this->sportModel->getSports();
+      $numbersport = $this->sportModel->numberSports();
+      $data = [
+        'numberuser' => $numberuser,
+        'numberstadium' => $numberstadium,
+        'numberbooken' => $numberbooken,
+        'numbercontact' => $numbercontact,
+        'citys' => $citys,
+        'numbercity' => $numbercity,
+        'sports' => $sports,
+        'numbersport' => $numbersport
+      ];
+      $this->view('dashboardsManager/index' , $data);
+    }else{
+      redirect('logins/logout');
+    }
   }
 
 }

@@ -7,11 +7,15 @@ class Users extends Controller {
     }
 
     public function index(){
-        $users = $this->loginModel->getUsers();
-        $data = [
-            'users' => $users,
-        ];
-        $this->view('Users/index' , $data);
+        if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 1) && (time() - $_SESSION['time'] > 60)) {
+            $users = $this->loginModel->getUsers();
+            $data = [
+                'users' => $users,
+            ];
+            $this->view('Users/index' , $data);            
+        }else{
+            redirect('logins/logout');
+        }
     }
 
     public function searchUser(){

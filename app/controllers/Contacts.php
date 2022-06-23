@@ -7,11 +7,15 @@ class Contacts extends Controller {
     }
 
     public function index(){
-        $contacts = $this->contactModel->getContacts();
-        $data = [
-            'contacts' => $contacts,
-        ];
-        $this->view('Contacts/index' , $data);
+        if(isset($_SESSION['user_id']) && ($_SESSION['role'] == 1) && (time() - $_SESSION['time'] > 60)) {
+            $contacts = $this->contactModel->getContacts();
+            $data = [
+                'contacts' => $contacts,
+            ];
+            redirect('logins/logout');
+        }else{
+            $this->view('Contacts/index' , $data);
+        }
       }
 
     public function sendMessage() {
