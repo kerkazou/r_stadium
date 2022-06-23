@@ -12,9 +12,9 @@ class Contacts extends Controller {
             $data = [
                 'contacts' => $contacts,
             ];
-            redirect('logins/logout');
-        }else{
             $this->view('Contacts/index' , $data);
+        }else{
+            redirect('logins/logout');            
         }
       }
 

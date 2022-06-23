@@ -12,9 +12,9 @@ class Bookens extends Controller {
       $data = [
           'Bookens' => $Bookens,
       ];
-      redirect('logins/logout');
-    }else{
       $this->view('Bookens/index' , $data);
+    }else{
+      redirect('logins/logout');      
     }
   }
 

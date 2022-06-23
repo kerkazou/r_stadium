@@ -73,8 +73,12 @@ class Logins extends Controller {
                 'password' => trim($_POST['password']),
                 'error' => ''
             ];
+
             if((!empty($data['email'])) && (!empty($data['password']))){
                 $login = $this->loginModel->signin($data);
+                if(isset($_POST['rememberme'])){
+                    $this->createUsercoockie($data);
+                }
                 if($login){
                     $this->createUserSession($login);
                     if($_SESSION['role'] == 1){
@@ -88,9 +92,6 @@ class Logins extends Controller {
                     }
                     else{
                         redirect('logins/logout');
-                    }
-                    if(isset($_POST['rememberme'])){
-                        $this->createUsercoockie($data);
                     }
                 }else if($login == false){
                     redirect('Logins#sign_in?error');
@@ -146,7 +147,9 @@ class Logins extends Controller {
 
 
     public function createUsercoockie($data) {
-        setcookie('email' , $data['email'] , time() + 60*60 , null , null , false , true);
-        setcookie('password' , $data['password'] , time() + 60*60 , null , null , false , true);
+        setcookie('email' , $data['email'] , time() + 60*60*30 ,'/');
+        setcookie('password' , $data['password'] , time() + 60*60*30 , '/');
+        // var_dump($_COOKIE);
+        // exit();
     }
 }
