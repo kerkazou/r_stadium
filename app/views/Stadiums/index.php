@@ -20,7 +20,7 @@
               <h1 class="text-uppercase fs-6">Stadium</h1>
             </div>
             <div class="card-body px-3 pt-0 pb-2">
-              <div class="table-responsive p-0" style="min-height: 150px; max-height: 480px; overflow-x: hidden;">
+              <div class="table-responsive p-0" style="min-height: 150px; max-height: 480px; overflow-x: auto;">
                 <table class="table align-items-center justify-content-center mb-0 text-center">
                   <thead>
                     <tr>

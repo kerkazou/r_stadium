@@ -95,7 +95,7 @@
 
         
         <div class="row mt-4">
-          <div class="col-lg-6">
+          <div class="col-lg-6 mb-md-0 mb-3">
             <div class="card">
               <div class="card-header pb-0 py-3 px-4">
                 <div class="d-flex mb-0"><h5 class="font-weight-bolder"><?php echo  $data['numbercity'] ;?></h5><h5>, City</h5></div>
