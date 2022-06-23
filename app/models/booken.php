@@ -36,8 +36,6 @@ class Booken {
     }
     
     public function booken($data){
-        // var_dump($_SESSION);
-        // exit();
         $this->db->query('INSERT INTO `booken` (user, stadium, date, hour) VALUES (:reservateur_id, :stadium_id, :date, :hour)');
         $this->db->bind(':reservateur_id', $_SESSION['user_id']);
         $this->db->bind(':stadium_id', $data['stadium_id']);
