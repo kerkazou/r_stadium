@@ -13,7 +13,7 @@
     <div class="container-fluid pt-5 pb-3">
       
       <div class="row">
-        <div class="col-sm-3 col-md-6 mb-xl-0 mb-4">
+        <div class="col-sm-3 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body px-3">
               <div class="row">
@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div class="col-sm-3 col-md-6 mb-xl-0 mb-4">
+        <div class="col-sm-3 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body px-3">
               <div class="row">
@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div class="col-sm-3 col-md-6 mb-xl-0 mb-4">
+        <div class="col-sm-3 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body px-3">
               <div class="row">
@@ -73,7 +73,7 @@
           </div>
         </div>
 
-        <div class="col-sm-3 col-md-6 mb-xl-0 mb-4">
+        <div class="col-sm-3 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body px-3">
               <div class="row">
